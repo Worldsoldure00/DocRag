@@ -1,0 +1,52 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data (large files — track with DVC or download scripts)
+data/raw/
+data/processed/
+indexes/
+
+# Model weights (large — store on HuggingFace Hub or Drive)
+models/
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+
+# Notebooks output
+notebooks/.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+langsmith_traces/
+
+# Keep empty dirs
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/eval/.gitkeep
+!indexes/.gitkeep
+!models/.gitkeep

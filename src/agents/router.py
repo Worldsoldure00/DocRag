@@ -1,0 +1,70 @@
+"""
+Router agent — classifies an incoming query as 'finance', 'medical', or 'both'.
+Uses Groq (fast, hosted) or Ollama (local fine-tuned Phi-4-mini).
+"""
+import re
+import logging
+import config
+
+log = logging.getLogger(__name__)
+
+SYSTEM_PROMPT = """You are a query router for a document Q&A system.
+Given a user question, classify it into exactly ONE of these domains:
+- finance   → questions about companies, stocks, SEC filings, earnings, revenue, financial ratios
+- medical   → questions about diseases, drugs, treatments, clinical trials, symptoms, biology
+- both      → question explicitly spans financial AND medical topics
+
+Respond with ONLY one word: finance, medical, or both. No explanation."""
+
+
+def _parse_domain(raw: str) -> str:
+    raw = raw.strip().lower()
+    for label in ("both", "finance", "medical"):
+        if label in raw:
+            return label
+    return "finance"  # safe fallback
+
+
+def classify_domain(query: str) -> str:
+    """Return 'finance', 'medical', or 'both' for the given query."""
+    if config.LLM_BACKEND == "groq":
+        return _classify_groq(query)
+    return _classify_ollama(query)
+
+
+def _classify_groq(query: str) -> str:
+    from langchain_groq import ChatGroq
+    from langchain.schema import HumanMessage, SystemMessage
+
+    llm = ChatGroq(
+        model=config.GROQ_ROUTER_MODEL,
+        api_key=config.GROQ_API_KEY,
+        temperature=0,
+        max_tokens=10,
+    )
+    response = llm.invoke([
+        SystemMessage(content=SYSTEM_PROMPT),
+        HumanMessage(content=query),
+    ])
+    domain = _parse_domain(response.content)
+    log.debug("Router (Groq) → %s for query: %s", domain, query[:80])
+    return domain
+
+
+def _classify_ollama(query: str) -> str:
+    from langchain_ollama import ChatOllama
+    from langchain.schema import HumanMessage, SystemMessage
+
+    llm = ChatOllama(
+        model=config.OLLAMA_ROUTER,
+        base_url=config.OLLAMA_BASE_URL,
+        temperature=0,
+        num_predict=10,
+    )
+    response = llm.invoke([
+        SystemMessage(content=SYSTEM_PROMPT),
+        HumanMessage(content=query),
+    ])
+    domain = _parse_domain(response.content)
+    log.debug("Router (Ollama) → %s for query: %s", domain, query[:80])
+    return domain
