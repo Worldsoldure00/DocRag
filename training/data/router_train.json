@@ -1,0 +1,293 @@
+[
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat was Apple revenue in Q3 2023? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are side effects of metformin? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nCompare JPMorgan net income to Goldman Sachs [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nMechanism of action of statins? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is Tesla debt-to-equity ratio? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nRisk factors for type 2 diabetes? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow did Pfizer COVID vaccine revenue affect 2022 earnings? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nGLP-1 drugs cardiovascular benefits and market outlook? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nCompare R&D spending of JNJ and PFE in 10-K filings [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat clinical trials are ongoing for Alzheimers? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is Microsoft cloud revenue growth in 2023? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the recommended dosage of ibuprofen? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat were Amazon AWS margins in 2022? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow effective is chemotherapy for breast cancer? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nDoes Moderna stock price correlate with vaccine efficacy trials? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the current stock price of Apple? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of diabetes? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow much revenue did Johnson & Johnson generate last quarter? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the treatment for cancer? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the definition of EBITDA? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the side effects of the COVID-19 vaccine? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I read a balance sheet? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a cold and the flu? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of an initial public offering? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on Alzheimer's disease? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I calculate my return on investment? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the benefits of meditation for mental health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of the SEC in regulating financial markets? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the prognosis for patients with multiple sclerosis? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of inflation on investments? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of clinical trials for new drugs? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I analyze a company's financial statements? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between diet and heart disease? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a stock and a bond? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of depression? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the purpose of a 10-K filing? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on gene editing? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I create a budget? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the treatment for PTSD? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of the Federal Reserve in monetary policy? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the benefits of yoga for physical health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of mergers and acquisitions? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the prognosis for patients with lung cancer? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of interest rates on investments? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between sleep and mental health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a hedge fund and a mutual fund? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of anxiety? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the purpose of a proxy statement? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on stem cell therapy? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I invest in real estate? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the treatment for arthritis? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of the CFO in a company? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the benefits of acupuncture for pain management? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of bankruptcy? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the prognosis for patients with kidney disease? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of trade policy on international trade? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between nutrition and cardiovascular health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a call option and a put option? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of fibromyalgia? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the purpose of a quarterly earnings report? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on immunotherapy? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I invest in a small business? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the treatment for migraines? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of the CEO in a company? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the benefits of meditation for stress relief? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of due diligence in mergers and acquisitions? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the prognosis for patients with Parkinson's disease? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of economic indicators on investments? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between exercise and mental health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a Roth IRA and a traditional IRA? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of chronic fatigue syndrome? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the purpose of a financial model? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on regenerative medicine? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do I invest in cryptocurrencies? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the treatment for asthma? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of the auditor in a company? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the benefits of mindfulness for mental health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the process of financial planning? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the prognosis for patients with multiple myeloma? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of geopolitical events on investments? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between sleep and physical health? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the difference between a financial advisor and a wealth manager? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat are the symptoms of lupus? [/INST] medical</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the purpose of a budget? [/INST] finance</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the latest research on personalized medicine? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do pharmaceutical companies invest in research and development? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of medical devices in healthcare? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of healthcare policy on the pharmaceutical industry? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between medical research and financial investment? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do biotech companies secure funding for research and development? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of venture capital in healthcare innovation? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of regulatory approval on pharmaceutical companies? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between medical innovation and financial returns? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nHow do healthcare companies manage financial risk? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the role of insurance companies in healthcare finance? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the impact of demographic changes on healthcare finance? [/INST] both</s>"
+  },
+  {
+    "text": "<s>[INST] Classify this query domain.\n\nWhat is the relationship between healthcare policy and financial markets? [/INST] both</s>"
+  }
+]

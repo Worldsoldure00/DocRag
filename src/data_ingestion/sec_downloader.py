@@ -1,5 +1,9 @@
 """
-Downloads SEC 10-K filings via sec-edgar-downloader and converts them to text chunks.
+Finance data ingestion — two sources combined:
+  1. Already-downloaded EDGAR full-submission.txt files (data/raw/sec_filings/)
+  2. HuggingFace: virattt/financial-qa-10K  (4K QA pairs for training)
+                  PatronusAI/financebench    (eval ground truth)
+
 Run: python -m src.data_ingestion.sec_downloader
 """
 import sys
@@ -7,133 +11,212 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 import json
+import re
 import logging
 from pathlib import Path
 
-import pdfplumber
 from bs4 import BeautifulSoup
-from sec_edgar_downloader import Downloader
+from datasets import load_dataset
 
 import config
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
-BOILERPLATE_PHRASES = [
-    "table of contents",
-    "forward-looking statements",
-    "this annual report on form 10-k",
-    "incorporated by reference",
-    "exhibit index",
+BOILERPLATE = [
+    "table of contents", "forward-looking statements", "incorporated by reference",
+    "exhibit index", "part i", "part ii", "part iii", "part iv",
 ]
 
 
-def _strip_boilerplate(text: str) -> str:
-    lines = text.splitlines()
-    kept = []
-    for line in lines:
-        lower = line.lower().strip()
-        if any(phrase in lower for phrase in BOILERPLATE_PHRASES):
+# ── Parse EDGAR full-submission.txt ──────────────────────────────────────────
+
+def _extract_html_from_submission(path: Path) -> list[str]:
+    """
+    EDGAR full-submission.txt embeds HTML inside <TEXT>...</TEXT> blocks.
+    Extract and parse each block.
+    """
+    try:
+        raw = path.read_text(encoding="utf-8", errors="ignore")
+    except Exception as e:
+        log.warning("Cannot read %s: %s", path, e)
+        return []
+
+    # Find all <TEXT> blocks (there may be multiple documents per submission)
+    blocks = re.findall(r"<TEXT>(.*?)</TEXT>", raw, re.DOTALL | re.IGNORECASE)
+    texts = []
+    for block in blocks:
+        block = block.strip()
+        if not block:
             continue
-        if len(lower) < 4:
-            continue
-        kept.append(line)
-    return "\n".join(kept)
+        # If it looks like HTML, parse it
+        if "<html" in block.lower() or "<body" in block.lower() or "<p" in block.lower():
+            soup = BeautifulSoup(block, "lxml")
+            for tag in soup(["script", "style", "header", "footer", "nav", "table"]):
+                tag.decompose()
+            text = soup.get_text(separator="\n", strip=True)
+        else:
+            text = block  # plain text block
+
+        # Strip boilerplate lines
+        clean_lines = []
+        for line in text.splitlines():
+            if len(line.strip()) < 10:
+                continue
+            if any(bp in line.lower() for bp in BOILERPLATE):
+                continue
+            clean_lines.append(line)
+
+        cleaned = "\n".join(clean_lines).strip()
+        if len(cleaned) > 200:
+            texts.append(cleaned)
+
+    return texts
 
 
-def _parse_html_filing(filepath: Path) -> str:
-    with open(filepath, encoding="utf-8", errors="ignore") as f:
-        soup = BeautifulSoup(f.read(), "lxml")
-    for tag in soup(["script", "style", "header", "footer", "nav"]):
-        tag.decompose()
-    return soup.get_text(separator="\n", strip=True)
+def parse_downloaded_filings() -> list[dict]:
+    """
+    Parse all downloaded full-submission.txt files into text chunks.
+    Directory structure: data/raw/sec_filings/sec-edgar-filings/{TICKER}/10-K/{accession}/full-submission.txt
+    """
+    from src.data_ingestion.chunker import split_text
 
+    base = config.RAW_SEC_DIR / "sec-edgar-filings"
+    if not base.exists():
+        log.warning("No EDGAR files found at %s — skipping EDGAR parsing", base)
+        return []
 
-def _parse_pdf_filing(filepath: Path) -> tuple[str, list[str]]:
-    """Returns (plain_text, list_of_table_markdown_strings)."""
-    text_parts = []
-    tables = []
-    with pdfplumber.open(filepath) as pdf:
-        for page in pdf.pages:
-            text_parts.append(page.extract_text() or "")
-            for table in page.extract_tables():
-                if table:
-                    header = " | ".join(str(c) for c in (table[0] or []))
-                    rows = [" | ".join(str(c or "") for c in row) for row in table[1:]]
-                    tables.append(header + "\n" + "\n".join(rows))
-    return "\n".join(text_parts), tables
-
-
-def download_filings() -> None:
-    """Download 10-K filings for all configured tickers."""
-    name  = config.SEC_EDGAR_NAME  or "DocSight RAG"
-    email = config.SEC_EDGAR_EMAIL or "placeholder@email.com"
-
-    if "placeholder" in email:
-        log.warning("SEC_EDGAR_NAME / SEC_EDGAR_EMAIL not set in .env — using placeholders.")
-
-    dl = Downloader(name, email, download_folder=str(config.RAW_SEC_DIR))
-    for ticker in config.SEC_TICKERS:
-        log.info("Downloading %s %s", ticker, config.SEC_FILING_TYPE)
-        dl.get(
-            config.SEC_FILING_TYPE,
-            ticker,
-            after=config.SEC_DATE_AFTER,
-            before=config.SEC_DATE_BEFORE,
-        )
-    log.info("Downloads complete → %s", config.RAW_SEC_DIR)
-
-
-def process_filings() -> list[dict]:
-    """Parse downloaded filings into chunk dicts and write to JSONL."""
-    config.PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     chunks = []
-
-    for ticker_dir in sorted(config.RAW_SEC_DIR.glob("*")):
-        if not ticker_dir.is_dir():
-            continue
+    for ticker_dir in sorted(base.iterdir()):
         ticker = ticker_dir.name
-        for filing_dir in sorted(ticker_dir.glob("**")):
-            for fpath in filing_dir.glob("*"):
-                if fpath.suffix in (".htm", ".html"):
-                    raw_text = _parse_html_filing(fpath)
-                    table_chunks = []
-                elif fpath.suffix == ".pdf":
-                    raw_text, table_chunks = _parse_pdf_filing(fpath)
-                else:
-                    continue
+        for filing_type_dir in ticker_dir.iterdir():
+            for accession_dir in filing_type_dir.iterdir():
+                for fpath in accession_dir.glob("*.txt"):
+                    texts = _extract_html_from_submission(fpath)
+                    for text in texts:
+                        for chunk_text in split_text(text):
+                            chunks.append({
+                                "text": chunk_text,
+                                "metadata": {
+                                    "domain":       "finance",
+                                    "ticker":       ticker,
+                                    "source":       f"edgar:{ticker}/{accession_dir.name}",
+                                    "filing_type":  "10-K",
+                                    "type":         "text",
+                                },
+                            })
 
-                clean = _strip_boilerplate(raw_text)
-                base_meta = {
-                    "domain": "finance",
-                    "ticker": ticker,
-                    "source": str(fpath.relative_to(config.BASE_DIR)),
-                    "filing_type": config.SEC_FILING_TYPE,
-                }
-
-                # Add table chunks as individual entries (keep each table intact)
-                for i, tbl in enumerate(table_chunks):
-                    chunks.append({
-                        "text": tbl,
-                        "metadata": {**base_meta, "section": f"table_{i}", "type": "table"},
-                    })
-
-                # Split narrative text
-                from src.data_ingestion.chunker import split_text
-                for chunk_text in split_text(clean):
-                    chunks.append({
-                        "text": chunk_text,
-                        "metadata": {**base_meta, "type": "text"},
-                    })
-
-    with open(config.FINANCE_CHUNKS_PATH, "w", encoding="utf-8") as f:
-        for chunk in chunks:
-            f.write(json.dumps(chunk) + "\n")
-
-    log.info("Wrote %d finance chunks → %s", len(chunks), config.FINANCE_CHUNKS_PATH)
+    log.info("Parsed %d chunks from EDGAR full-submission.txt files", len(chunks))
     return chunks
 
 
+# ── HuggingFace supplement ─────────────────────────────────────────────────────
+
+def load_finance_qa_pairs() -> list[dict]:
+    """4K ready-made QA pairs from virattt/financial-qa-10K."""
+    log.info("Loading virattt/financial-qa-10K from HuggingFace...")
+    ds = load_dataset("virattt/financial-qa-10K", trust_remote_code=True)
+    pairs = []
+    for split in ds:
+        for item in ds[split]:
+            q = item.get("question", "")
+            a = item.get("answer", "")
+            c = item.get("context", "")
+            if q and a:
+                pairs.append({
+                    "question": q, "answer": a, "context": c,
+                    "metadata": {"domain": "finance", "source": "financial-qa-10K"},
+                })
+    log.info("Loaded %d finance QA pairs", len(pairs))
+    return pairs
+
+
+def load_financebench_eval() -> list[dict]:
+    """PatronusAI/financebench — gold-standard eval QA with evidence strings."""
+    log.info("Loading PatronusAI/financebench from HuggingFace...")
+    try:
+        ds = load_dataset("PatronusAI/financebench", trust_remote_code=True)
+    except Exception as e:
+        log.warning("Could not load financebench: %s — using financial-qa-10K for eval instead", e)
+        return []
+
+    items = []
+    for split in ds:
+        for item in ds[split]:
+            q = item.get("question", "")
+            a = item.get("answer", "")
+            evidence = item.get("evidence", [])
+            if isinstance(evidence, list):
+                ctx = " ".join(e.get("evidence_text", "") for e in evidence if isinstance(e, dict))
+            else:
+                ctx = str(evidence)
+            if q and a:
+                items.append({
+                    "question":     q,
+                    "ground_truth": a,
+                    "contexts":     [ctx] if ctx else [],
+                    "metadata": {
+                        "domain":  "finance",
+                        "source":  "financebench",
+                        "company": item.get("company_name", ""),
+                    },
+                })
+    log.info("Loaded %d FinanceBench eval items", len(items))
+    return items
+
+
+# ── Main pipeline ──────────────────────────────────────────────────────────────
+
+def process_finance_data() -> None:
+    config.PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    config.EVAL_DIR.mkdir(parents=True, exist_ok=True)
+
+    # 1. Parse EDGAR files (already downloaded)
+    edgar_chunks = parse_downloaded_filings()
+
+    # 2. Load HuggingFace QA pairs; add their contexts as extra corpus chunks
+    qa_pairs = load_finance_qa_pairs()
+    from src.data_ingestion.chunker import split_text
+    hf_chunks = []
+    for qa in qa_pairs:
+        if qa["context"]:
+            for chunk_text in split_text(qa["context"]):
+                hf_chunks.append({
+                    "text": chunk_text,
+                    "metadata": {"domain": "finance", "source": "financial-qa-10K", "type": "text"},
+                })
+
+    all_chunks = edgar_chunks + hf_chunks
+    log.info("Total finance chunks: %d (EDGAR=%d, HF=%d)", len(all_chunks), len(edgar_chunks), len(hf_chunks))
+
+    with open(config.FINANCE_CHUNKS_PATH, "w", encoding="utf-8") as f:
+        for chunk in all_chunks:
+            f.write(json.dumps(chunk) + "\n")
+    log.info("Wrote %d finance chunks → %s", len(all_chunks), config.FINANCE_CHUNKS_PATH)
+
+    # 3. Save training QA pairs
+    qa_out = config.BASE_DIR / "training" / "data" / "finance_qa_raw.json"
+    qa_out.parent.mkdir(parents=True, exist_ok=True)
+    with open(qa_out, "w", encoding="utf-8") as f:
+        json.dump(qa_pairs, f, indent=2)
+    log.info("Saved %d finance QA training pairs → %s", len(qa_pairs), qa_out)
+
+    # 4. Save eval set
+    import random
+    eval_items = load_financebench_eval()
+    if not eval_items:
+        # Fallback: build eval from QA pairs
+        eval_items = [
+            {"question": p["question"], "ground_truth": p["answer"],
+             "contexts": [p["context"]] if p["context"] else [],
+             "metadata": p["metadata"]}
+            for p in qa_pairs if p["question"] and p["answer"]
+        ]
+    eval_sample = random.sample(eval_items, min(100, len(eval_items)))
+    with open(config.EVAL_FINANCE_PATH, "w", encoding="utf-8") as f:
+        json.dump(eval_sample, f, indent=2)
+    log.info("Saved %d finance eval items → %s", len(eval_sample), config.EVAL_FINANCE_PATH)
+
+
 if __name__ == "__main__":
-    download_filings()
-    process_filings()
+    process_finance_data()

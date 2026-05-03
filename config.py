@@ -51,8 +51,8 @@ ROUTER_BASE_MODEL  = "microsoft/phi-4-mini-instruct"
 FINANCE_BASE_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
 MEDICAL_BASE_MODEL = "BioMistral/BioMistral-7B"
 
-FINANCE_EMBED_MODEL = "FinanceMTEB/FinE5"
-MEDICAL_EMBED_MODEL = "NeuML/pubmedbert-base-embeddings"
+FINANCE_EMBED_MODEL = "BAAI/bge-large-en-v1.5"          # 1024-dim, MTEB top-10, strong on financial text
+MEDICAL_EMBED_MODEL = "NeuML/pubmedbert-base-embeddings" # 768-dim, purpose-built for PubMed retrieval
 
 # ── Groq Models ───────────────────────────────────────────────────────────────
 # Fast hosted inference — used when LLM_BACKEND=groq or for QA generation
@@ -103,6 +103,12 @@ PUBMED_QUERIES = [
     "hypertension antihypertensive drug therapy",
 ]
 PUBMED_MAX_RESULTS = 2000   # per query → ~8K abstracts total
+
+# ── Index size cap (subsample for demo; set to None for full corpus) ──────────
+# Finance has 871K chunks — cap at 60K for manageable local indexing
+# Increase or set None after moving to a GPU cluster
+MAX_FINANCE_CHUNKS = 60_000
+MAX_MEDICAL_CHUNKS = None   # 50K medical chunks — keep all
 
 # ── Evaluation ────────────────────────────────────────────────────────────────
 EVAL_SAMPLE_SIZE      = 100   # QA pairs per domain
