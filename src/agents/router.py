@@ -34,7 +34,7 @@ def classify_domain(query: str) -> str:
 
 def _classify_groq(query: str) -> str:
     from langchain_groq import ChatGroq
-    from langchain.schema import HumanMessage, SystemMessage
+    from langchain_core.messages import HumanMessage, SystemMessage
 
     llm = ChatGroq(
         model=config.GROQ_ROUTER_MODEL,
@@ -53,7 +53,7 @@ def _classify_groq(query: str) -> str:
 
 def _classify_ollama(query: str) -> str:
     from langchain_ollama import ChatOllama
-    from langchain.schema import HumanMessage, SystemMessage
+    from langchain_core.messages import HumanMessage, SystemMessage
 
     llm = ChatOllama(
         model=config.OLLAMA_ROUTER,

@@ -6,8 +6,28 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
+# Force CPU and disable OpenMP thread pools.
+# On Windows, PyTorch/OpenMP worker threads crash during teardown when
+# model.encode() runs inside Streamlit's non-main worker thread.
+# Setting these before any native library loads prevents thread pool creation.
+os.environ["DOCSIGHT_FORCE_CPU"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 import streamlit as st
-import plotly.graph_objects as go
+
+# Cap torch to 1 inter-op and 1 intra-op thread — prevents OpenMP crash
+# when PyTorch runs inside Streamlit's non-main worker thread on Windows.
+try:
+    from sentence_transformers import SentenceTransformer as _warmup  # noqa: F401
+    import torch as _torch
+    _torch.set_num_threads(1)
+    _torch.set_num_interop_threads(1)
+except Exception:
+    pass
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -84,8 +104,22 @@ if run_btn and query.strip():
         try:
             from src.agents.graph import run_query
             state = run_query(query.strip())
+            # Force CUDA sync before leaving the heavy-compute section.
+            # On Windows, CUDA tensor cleanup in Streamlit's worker thread
+            # triggers an access violation if tensors are freed lazily.
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    torch.cuda.synchronize()
+                    torch.cuda.empty_cache()
+            except Exception:
+                pass
         except Exception as e:
-            st.error(f"Pipeline error: {e}")
+            import traceback
+            err = traceback.format_exc()
+            with open("pipeline_error.log", "a") as _f:
+                _f.write(err + "\n")
+            st.markdown(f"**Pipeline error:** {e}")
             st.stop()
 
     domain     = state.get("domain", "?")
@@ -98,24 +132,11 @@ if run_btn and query.strip():
     badge = domain_colors.get(domain, "⬜")
     st.markdown(f"### {badge} Domain: `{domain.upper()}`")
 
-    # ── Confidence gauge ──────────────────────────────────────────────────────
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=round(confidence * 100, 1),
-        title={"text": "Confidence"},
-        gauge={
-            "axis": {"range": [0, 100]},
-            "bar":  {"color": "#2196F3"},
-            "steps": [
-                {"range": [0, 50],  "color": "#ffcccc"},
-                {"range": [50, 75], "color": "#fff3cc"},
-                {"range": [75, 100],"color": "#ccffcc"},
-            ],
-            "threshold": {"line": {"color": "red", "width": 2}, "thickness": 0.75, "value": 80},
-        },
-    ))
-    fig.update_layout(height=200, margin=dict(t=30, b=0, l=20, r=20))
-    st.plotly_chart(fig, use_container_width=False)
+    # ── Confidence meter (plain markdown — avoids lazy-loaded JS chunks) ─────
+    pct = round(confidence * 100, 1)
+    bar_filled = int(pct / 5)  # 0-20 blocks
+    bar = "█" * bar_filled + "░" * (20 - bar_filled)
+    st.markdown(f"**Confidence:** `{pct}%`  `{bar}`")
 
     st.divider()
 
@@ -127,6 +148,7 @@ if run_btn and query.strip():
 
     # ── Sources ───────────────────────────────────────────────────────────────
     if sources:
+        import gc; gc.collect()
         st.subheader(f"Sources ({len(sources)} chunks retrieved)")
 
         finance_srcs = [s for s in sources if s["metadata"].get("domain") == "finance"]
@@ -164,10 +186,10 @@ if run_btn and query.strip():
         if medical_srcs:
             _render_sources(created_tabs[idx], medical_srcs)
     else:
-        st.info("No source documents were retrieved.")
+        st.markdown("_No source documents were retrieved._")
 
 elif run_btn and not query.strip():
-    st.warning("Please enter a question first.")
+    st.markdown("**Please enter a question first.**")
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.divider()

@@ -8,9 +8,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 import argparse
 import logging
+from typing import List
 
+# sentence_transformers MUST be imported first — importing torch before it
+# causes a segfault on Windows. sentence_transformers bootstraps torch correctly.
+from sentence_transformers import SentenceTransformer as _ST  # noqa: F401
+
+from langchain_core.embeddings import Embeddings
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
 
 import config
 from src.data_ingestion.chunker import jsonl_to_documents
@@ -19,13 +24,38 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 
-def _load_embedder(model_name: str) -> HuggingFaceEmbeddings:
-    log.info("Loading embedding model: %s", model_name)
-    return HuggingFaceEmbeddings(
-        model_name=model_name,
-        model_kwargs={"device": "cuda" if _cuda_available() else "cpu"},
-        encode_kwargs={"normalize_embeddings": True, "batch_size": 64},
-    )
+class _STEmbeddings(Embeddings):
+    """Thin wrapper around sentence_transformers.SentenceTransformer.
+
+    Avoids importing langchain_huggingface which triggers a transformers pipeline
+    side-effect that crashes on Windows with Python 3.13 when combined with
+    sentence_transformers model loading.
+    """
+
+    def __init__(self, model_name: str, device: str = "cpu", batch_size: int = 64, normalize: bool = True):
+        from sentence_transformers import SentenceTransformer
+        log.info("Loading embedding model: %s on %s", model_name, device)
+        self._model = SentenceTransformer(model_name, device=device)
+        self._batch_size = batch_size
+        self._normalize = normalize
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        vecs = self._model.encode(
+            texts,
+            batch_size=self._batch_size,
+            normalize_embeddings=self._normalize,
+            show_progress_bar=False,
+        )
+        return vecs.tolist()
+
+    def embed_query(self, text: str) -> List[float]:
+        vec = self._model.encode(
+            [text],
+            batch_size=1,
+            normalize_embeddings=self._normalize,
+            show_progress_bar=False,
+        )
+        return vec[0].tolist()
 
 
 def _cuda_available() -> bool:
@@ -36,12 +66,18 @@ def _cuda_available() -> bool:
         return False
 
 
+def _load_embedder(model_name: str) -> _STEmbeddings:
+    import os
+    force_cpu = os.environ.get("DOCSIGHT_FORCE_CPU") == "1"
+    device = "cpu" if force_cpu else ("cuda" if _cuda_available() else "cpu")
+    return _STEmbeddings(model_name, device=device, batch_size=64, normalize=True)
+
+
 def _subsample(docs, max_n):
     """Stratified subsample by ticker/source to keep representation."""
     if max_n is None or len(docs) <= max_n:
         return docs
     import random
-    # Group by ticker/source, sample proportionally
     from collections import defaultdict
     groups = defaultdict(list)
     for d in docs:
@@ -51,7 +87,6 @@ def _subsample(docs, max_n):
     per_group = max(1, max_n // len(groups))
     for key, group_docs in groups.items():
         sampled.extend(random.sample(group_docs, min(per_group, len(group_docs))))
-    # Top up to max_n if under
     sampled_idx = {id(d) for d in sampled}
     remaining = [d for d in docs if id(d) not in sampled_idx]
     if len(sampled) < max_n and remaining:

@@ -4,7 +4,7 @@ grounded answer using fine-tuned BioMistral-7B (via Ollama) or Groq fallback.
 """
 import logging
 from functools import lru_cache
-from langchain.schema import Document
+from langchain_core.documents import Document
 import config
 
 log = logging.getLogger(__name__)
@@ -46,12 +46,13 @@ def _get_llm():
 @lru_cache(maxsize=1)
 def _get_retriever():
     from src.data_ingestion.embedder import load_medical_index
-    from src.data_ingestion.chunker import jsonl_to_documents
     from src.retrieval.hybrid_retriever import build_hybrid_retriever
 
     index = load_medical_index()
-    docs  = jsonl_to_documents(config.MEDICAL_CHUNKS_PATH)
-    return build_hybrid_retriever(docs, index, k=config.TOP_K)
+    import random
+    all_docs = list(index.docstore._dict.values())
+    bm25_docs = random.sample(all_docs, min(5000, len(all_docs)))
+    return build_hybrid_retriever(bm25_docs, index, k=config.TOP_K)
 
 
 def run(query: str, use_reranker: bool = True) -> dict:

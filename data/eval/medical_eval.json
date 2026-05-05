@@ -1,0 +1,1102 @@
+[
+  {
+    "question": "Is intraocular pressure decrease after local ocular cooling underestimated by applanation tonometry?",
+    "ground_truth": "The eye is very sensitive to local cooling effects, which may, however, partially be masked by changes in corneal thickness.",
+    "contexts": [
+      "The effects of intense systemic or local cooling on aqueous humor dynamics in animals are an increased total outflow facility and a decreased aqueous flow. Few studies suggest that only vasoconstriction of arteriolar segments of the episcleral vasculature may be the cause for a decrease in intraocular pressure after local cooling in humans. Because corneal changes may have influenced such studies, the effect of local cooling was assessed in normal subjects. Intraocular pressure and corneal thickness were measured in 18 healthy human subjects before and after exposure of the right eye to both, an air stream at 20 degrees C, and an air stream at 0 degrees C."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is the TRAIL system over-expressed in breast cancer and FLIP a marker of good prognosis?",
+    "ground_truth": "These findings support the use of agonistic TRAIL antibodies and drugs targeting FLIP in breast cancer patients. Over-expression of FLIP(T) but not TRAIL-R1, TRAIL-R2 or FLIP(L) provides stage-independent prognostic information in breast cancer patients. This indicates a clinically less aggressive phenotype.",
+    "contexts": [
+      "Breast cancer is the most common cancer in women. The tumor necrosis factor-related apoptosis-inducing ligand (TRAIL) pathway transmits apoptotic signals. Novel anticancer agents that activate this system are in clinical development, including anti-breast cancer. The tissue microarray technique was applied. We used an array of breast cancer tissues from a large group of patients (>800) to assess the protein expression of TRAIL-R1, TRAIL-R2, the long isoform of FLICE-inhibitory protein and total FLICE-inhibitory protein (FLIP(L) and FLIP(T)). Disease-free survival was examined by Kaplan-Meier estimates and the log-rank test. The independence of prognostic factors was determined by Cox multivariate analysis."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does iFNβ secreted by microglia mediate clearance of myelin debris in CNS autoimmunity?",
+    "ground_truth": "These data identify activated microglia as the major producers of protective IFNβ at the peak of EAE and as orchestrators of IFNβ-induced clearance of myelin debris.",
+    "contexts": [
+      "Multiple sclerosis (MS) is a chronic demyelinating disorder of the central nervous system (CNS) leading to progressive neurological disability. Interferon β (IFNβ) represents a standard treatment for relapsing-remitting MS and exogenous administration of IFNβ exhibits protective effects in experimentally induced CNS autoimmunity. Also, genetic deletion of IFNβ in mice leads to an aggravation of disease symptoms in the MS model of experimental autoimmune encephalomyelitis (EAE). However, neither the underlying mechanisms mediating the beneficial effects nor the cellular source of IFNβ have been fully elucidated. In this report, a subpopulation of activated microglia was identified as the major producers of IFNβ in the CNS at the peak of EAE using an IFNβ-fluorescence reporter mouse model. These IFNβ expressing microglia specifically localized to active CNS lesions and were associated with myelin debris in demyelinated cerebellar organotypic slice cultures (OSCs). In response to IFNβ microglia showed an enhanced capacity to phagocytose myelin in vitro and up-regulated the expression of phagocytosis-associated genes. IFNβ treatment was further sufficient to stimulate association of microglia with myelin debris in OSCs. Moreover, IFNβ-producing microglia mediated an enhanced removal of myelin debris when co-transplanted onto demyelinated OSCs as compared to IFNβ non-producing microglia."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does increased muscle proteasome activity correlate with disease severity in gastric cancer patients?",
+    "ground_truth": "These results confirm the involvement of the ubiquitin-proteasome proteolytic system in the pathogenesis of muscle protein hypercatabolism in cancer cachexia. The observation that perturbations of this pathway in gastric cancer patients occur even before clinical evidence of body wasting supports the thinking that specific pharmacologic and metabolic approaches aimed at counteracting the upregulation of this pathway should be undertaken as early as cancer is diagnosed.",
+    "contexts": [
+      "To investigate the state of activation of the ATP-ubiquitin-dependent proteolytic system in the skeletal muscle of gastric cancer patients. Muscle wasting in experimental cancer cachexia is frequently associated with hyperactivation of the ATP-dependent ubiquitin-proteasome proteolytic system. Increased muscle ubiquitin mRNA levels have been previously shown in gastric cancer patients, suggesting that this proteolytic system might be modulated also in human cancer."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is a small reduction in glomerular filtration accompanied by insulin resistance in type I diabetes patients with diabetic nephrophathy?",
+    "ground_truth": "In type 1 diabetes, the appearance of albuminuria does not seem to alter insulin sensitivity and clearance. A marked insulin resistance but no consistent impairment in insulin clearance seems to accompany progression to a stage with a slight reduction in GFR. These alterations are not accompanied by general defects in insulin target cells. Instead, alterations in the regulation of insulin-antagonistic hormones and cytokines could potentially contribute to the development of insulin resistance in diabetic nephropathy.",
+    "contexts": [
+      "Insulin sensitivity and insulin clearance are compromised in end-stage renal disease but it has not been fully established whether they are altered in earlier stages of diabetic nephropathy. We studied three groups of patients with type 1 diabetes; 10 with no sign of nephropathy, 11 with albuminuria (> 20 microg min-1) but normal glomerular filtration rate (GFR) and eight with a small reduction in GFR, (43-73 mL min-1 1.73 m-2). The groups were matched for age (range 36-61 years), body mass index (BMI), diabetes duration and glycaemic control. The euglycaemic hyperinsulinaemic clamp technique was utilized to study insulin sensitivity (M-value) and metabolic clearance rate for insulin. Needle biopsies from abdominal subcutaneous fat tissue were obtained to study insulin binding, insulin degradation, insulin-stimulated glucose uptake and anti-lipolysis in adipocytes in vitro."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is mYLIP p.N342S polymorphism associated with lipid profile in the Brazilian population?",
+    "ground_truth": "Our findings indicate that association studies involving this MYLIP variant can present distinct results according to the studied population. In this moment, further studies are needed to reaffirm if the MYLIP p.N342S polymorphism is functional or not, and to identify other functional markers within this gene.",
+    "contexts": [
+      "A recent study investigated the MYLIP region in the Mexican population in order to fine-map the actual susceptibility variants of this locus. The p.N342S polymorphism was identified as the underlying functional variant accounting for one of the previous signals of genome-wide association studies and the N342 allele was associated with higher cholesterol concentrations in Mexican dyslipidemic individuals. To date, there is no further evaluation on this genotype-phenotype association in the literature. In this scenario, and because of a possible pharmacotherapeutic target of dyslipidemia, the main aim of this study was to assess the influence of the MYLIP p.N342S polymorphism on lipid profile in Brazilian individuals. 1295 subjects of the general population and 1425 consecutive patients submitted to coronary angiography were selected. General characteristics, biochemical tests, blood pressures, pulse wave velocity, and coronary artery disease scores were analyzed. Genotypes for the MYLIP rs9370867 (p.N342S, c.G1025A) polymorphism were detected by high resolution melting analysis."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is atg16l1 required for autophagy in intestinal epithelial cells and protection of mice from Salmonella infection?",
+    "ground_truth": "Atg16l1 regulates autophagy in intestinal epithelial cells and is required for bacterial clearance. It also is required to prevent systemic infection of mice with enteric bacteria.",
+    "contexts": [
+      "Intestinal epithelial cells aid in mucosal defense by providing a physical barrier against entry of pathogenic bacteria and secreting antimicrobial peptides (AMPs). Autophagy is an important component of immune homeostasis. However, little is known about its role in specific cell types during bacterial infection in vivo. We investigated the role of autophagy in the response of intestinal epithelial and antigen-presenting cells to Salmonella infection in mice. We generated mice deficient in Atg16l1 in epithelial cells (Atg16l1(f/f) × Villin-cre) or CD11c(+) cells (Atg16l1(f/f) × CD11c-cre); these mice were used to assess cell type-specific antibacterial autophagy. All responses were compared with Atg16l1(f/f) mice (controls). Mice were infected with Salmonella enterica serovar typhimurium; cecum and small-intestine tissues were collected for immunofluorescence, histology, and quantitative reverse-transcription polymerase chain reaction analyses of cytokines and AMPs. Modulators of autophagy were screened to evaluate their effects on antibacterial responses in human epithelial cells."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does pH-sensitivity of YFP provide an intracellular indicator of programmed cell death?",
+    "ground_truth": "The observation that YFP fluorescence is lost during the plant PCD process provides a new tool to study the genetic regulation and cell biology of the process. In addition, plant cell biologists should make a note of this effect of PCD on YFP fluorescence to avoid misinterpretation of their data and to select a pH insensitive reporter if appropriate. This method represents an efficient and streamlined tool expected to bring insights on the process leading to the pH shift occurring during PCD.",
+    "contexts": [
+      "Programmed cell death (PCD) is an essential process for the life cycle of all multicellular organisms. In higher plants however, relatively little is known about the cascade of genes and signalling molecules responsible for the initiation and execution of PCD. To aid with the discovery and analysis of plant PCD regulators, we have designed a novel cell death assay based on low cytosolic pH as a marker of PCD. The acidification that occurs in the cytosol during plant PCD was monitored by way of the extinction of YFP fluorescence at low pH. This fluorescence was recovered experimentally when bringing the intracellular pH back to 7, demonstrating that there was no protein degradation of YFP. Because it uses YFP, the assay is none-destructive, does not interfere with the PCD process and allows time-lapse studies to be carried out. In addition, changes of sub-cellular localisation can be visualised during PCD using the protein of interest fused to RFP. Coupled to a transient expression system, this pH-based assay can be used to functionally analyse genes involved in PCD, using point mutations or co-expressing PCD regulators. Transfecting mBAX and AtBI-1in onion epidermal cells showed that the pH shift is downstream of PCD suppression by AtBI-1. In addition, this method can be used to score PCD in tissues of stably transformed transgenic lines. As proof of principle, we show the example of YFP extinction during xylogenesis in Arabidopsis. This demonstrates that the assay is applicable to PCD studies in a variety of tissues."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is carrier status for steroid 21-hydroxylase deficiency only one factor in the variable phenotype of acne?",
+    "ground_truth": "Although alterations of the CYP21 gene were more common in acne than in controls there is a poor correlation between these events and raised steroids and acne. Factors other than mild impairment of CYP21 contribute to the variability of the clinical phenotype in hyperandrogenic states including acne.",
+    "contexts": [
+      "Previous endocrine studies of women with acne have produced diverse results. This study was designed to seek evidence, from endocrine and genetic studies, for impaired steroid biosynthesis in patients with acne. Adrenal stimulation tests with synthetic adrenocorticotrophic hormone (ACTH) were performed."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does postprandial walking but not consumption of alcoholic digestifs or espresso accelerate gastric emptying in healthy volunteers?",
+    "ground_truth": "Postprandial consumption of alcoholic digestifs did not affect gastric emptying rate of a solid meal nor postprandial dyspeptic complaints. However, postprandial walking accelerated gastric emptying of the meal but this had no effect on dyspeptic symptoms.",
+    "contexts": [
+      "Postprandial consumption of alcoholic beverages with high ethanol concentration (so-called digestifs) is a widespread custom to alleviate dyspeptic symptoms after comprehensive meals. Alcoholic beverages preprandially ingested inhibit gastric emptying rate of solid meals. However, the effect of a postprandial intake has never been studied in a controlled manner. In 10 healthy male subjects gastric emptying was repeatedly studied by ultrasonography after the intake of a 576 kcal meal. Immediately after the meal subjects received in a randomized order 40 ml of the following liquids: brandy, herb flavored liqueur, Williams pear brandy, aquavit (each 40 % (v/v) ethanol concentration), espresso, water, 40% (v/v) ethanol and 70% (w/v) glucose. Postprandial satiety, fullness and bloating were determined on a visual analogue scale every 10 minutes. On another occasion subjects received 40 ml of water and walked afterwards slowly (4 km/h) on a treadmill."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does mannitol improve Brain Tissue Oxygenation in a Model of Diffuse Traumatic Brain Injury?",
+    "ground_truth": "The development of posttraumatic brain edema can limit the oxygen utilization by brain tissue without evidence of brain ischemia. Our findings indicate that an antiedematous agent such as mannitol can improve brain tissue oxygenation, possibly by limiting astrocyte swelling and restoring capillary perfusion.",
+    "contexts": [
+      "Based on evidence supporting a potential relation between posttraumatic brain hypoxia and microcirculatory derangements with cell edema, we investigated the effects of the antiedematous agent mannitol on brain tissue oxygenation in a model of diffuse traumatic brain injury. Experimental study."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does the amino acid L-lysine block the disruptive effect of phencyclidine on prepulse inhibition in mice?",
+    "ground_truth": "L-lysine has been shown to block L-arginine transport in vitro, most likely via a competitive blockade and down regulation of cationic amino acid transporters. However, the importance of L-arginine transport as a regulatory mechanism in NO production in vivo is still not clear. The present results lend further support to the notion that some of the effects of PCP in the central nervous system are mediated via NO and that L-arginine transport may play a role in the regulation of NO production in the brain.",
+    "contexts": [
+      "The cognitive and attentional deficits observed in schizophrenic patients are now considered central to the pathophysiology of the disorder. These deficits include an inability to filter sensory input as measured by, e.g., prepulse inhibition (PPI) reflex. Administration of phencyclidine (PCP), a drug that can induce a schizophrenia-like psychosis in humans, disrupts PPI in experimental animals. In rodents, this PCP-induced deficit can be blocked by pretreatment with nitric oxide (NO) synthase inhibitors. This suggests that some of the behavioral effects of PCP are mediated via NO. The substrate for in vivo NO production is L-arginine, and active transport of L-arginine via the cationic amino acid transporter may serve as a regulatory mechanism in NO production. The aim of the present study was to study the effects of L-arginine transport inhibition, using acute and repeated L-lysine treatment, on PCP-induced disruption of PPI in mice."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does polymerase γ gene POLG determine the risk of sodium valproate-induced liver toxicity?",
+    "ground_truth": "These findings implicate impaired liver regeneration in VPA toxicity and show that prospective genetic testing of POLG will identify individuals at high risk of this potentially fatal consequence of treatment.",
+    "contexts": [
+      "Sodium valproate (VPA) is widely used throughout the world to treat epilepsy, migraine, chronic headache, bipolar disorder, and as adjuvant chemotherapy. VPA toxicity is an uncommon but potentially fatal cause of idiosyncratic liver injury. Rare mutations in POLG, which codes for the mitochondrial DNA polymerase γ (polγ), cause Alpers-Huttenlocher syndrome (AHS). AHS is a neurometabolic disorder associated with an increased risk of developing fatal VPA hepatotoxicity. We therefore set out to determine whether common genetic variants in POLG explain why some otherwise healthy individuals develop VPA hepatotoxicity. We carried out a prospective study of subjects enrolled in the Drug Induced Liver Injury Network (DILIN) from 2004 to 2008 through five US centers. POLG was sequenced and the functional consequences of VPA and novel POLG variants were evaluated in primary human cell lines and the yeast model system Saccharomyces cerevisiae. Heterozygous genetic variation in POLG was strongly associated with VPA-induced liver toxicity (odds ratio = 23.6, 95% confidence interval [CI] = 8.4-65.8, P = 5.1 × 10⁻⁷). This was principally due to the p.Q1236H substitution which compromised polγ function in yeast. Therapeutic doses of VPA inhibited human cellular proliferation and high doses caused nonapoptotic cell death, which was not mediated through mitochondrial DNA depletion, mutation, or a defect of fatty acid metabolism."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does surgical stress induce acute coronary release of tissue-type plasminogen activator in the pig?",
+    "ground_truth": "The rapidly increasing and transient net coronary release of t-PA after sternotomy suggests that the endothelium actively promotes local endogenous fibrinolysis during surgery. Such events could reflect a dynamic responsiveness to protect the coronary circulation during stress.",
+    "contexts": [
+      "Tissue-type plasminogen activator (t-PA) is an endothelium derived key enzyme in the initiation of endogenous fibrinolysis. Acute regulated release of active t-PA occurs within minutes in response to threatening thrombotic vessel occlusion. The aim of this study was to investigate the impact of surgical stimulation on the kinetics of t-PA release in the coronary vascular bed in the pig. In anaesthetised pigs (n=16), arterio-venous concentration gradients of t-PA, and plasma flows (retrograde thermodilution) were obtained across the coronary vascular bed before (control) and at 1, 3, 5 and 10 min after sternotomy."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do histamine H4 and H1 receptors contribute to postinflammatory visceral hypersensitivity?",
+    "ground_truth": "H4R and H1R antagonists dose-dependently reduce and even normalise postinflammatory visceral hypersensitivity via different underlying mechanisms but with a synergistic effect. Both receptor subtypes represent promising targets for the treatment of postinflammatory visceral hypersensitivity.",
+    "contexts": [
+      "Substantial evidence implicates mast cells and their main constituent histamine in the pathogenesis of visceral hypersensitivity. We explored the specific contribution of histamine H4 (H4R) and H1 (H1R) receptors to visceral hypersensitivity in a postinflammatory rat model. Trinitrobenzenesulfonic acid (TNBS)-colitis was monitored individually by colonoscopy: first on day 3 to confirm the presence of colitis and then every 4 days, starting from day 10, to monitor convalescence and determine the exact timepoint of endoscopic healing in each rat. Experiments were performed 3 days after endoscopic resolution of colitis. Visceral sensitivity was assessed by quantifying visceromotor responses (VMRs) to colorectal distension. Colonic mast cell numbers, histamine release and H4R and H1R mRNA expression were quantified. JNJ7777120 (H4R antagonist) and/or levocetirizine (H1R antagonist) were administered 30 min prior to VMR assessment or histamine release assay."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is helicobacter pylori a major public health priority in western Balkans : an endoscopy referral center experience?",
+    "ground_truth": "This is the first attempt in western Balkans to demonstrate by routine gastroscopy and biopsy that there is a significantly higher prevalence of H. pylori and active gastritis in Albanians as compared to Greeks.",
+    "contexts": [
+      "Helicobacter pylori infection is a highly prevalent community infection. The prevalence of H.pylori infection has been reported to vary worldwide by geographical area and by social and economic conditions. To investigate possible differences regarding the prevalence of H. pylori infection and related gastritis in Greek and Albanian patients undergoing routine endoscopy."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does leukopenia predict remission in patients with inflammatory bowel disease and Behcet 's disease on thiopurine maintenance?",
+    "ground_truth": "Leukopenia during thiopurine maintenance therapy was associated with prolonged remission in patients with IBD and Behcet's disease.",
+    "contexts": [
+      "The thiopurine drugs, azathioprine (AZA), and 6-mercaptopurine (6-MP) are well-established drugs for the treatment of inflammatory bowel disease (IBD). Although leukopenia is a well-recognized side effect of AZA/6-MP treatment, its association with therapeutic effects has yet to be determined. We therefore evaluated the influences of thiopurine-induced leukopenia on the long-term prognosis of IBD. We included 196 IBD patients [45 with ulcerative colitis (UC), 68 with Crohn's disease (CD), and 83 with intestinal Behçet's disease (BD)] who were treated with AZA/6-MP and achieved remission between January 2006 and December 2012. We retrospectively analyzed patient characteristics, AZA/6-MP maintenance dose (mg/kg), the lowest white blood cell (WBC) count during AZA/6-MP treatment, duration of remission, and the occurrence of relapse. We compared the clinical variables between leukopenic (n = 120, WBC count <4,000/μL) and nonleukopenic (n = 76, WBC count ≥ 4,000/μL) patients."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does electrical stimulation alter FMD and arterial compliance in extremely inactive legs?",
+    "ground_truth": "Daily electrically induced training of an extremely deconditioned leg appears to enhance arterial compliance in the femoral artery and may normalize endothelial function.",
+    "contexts": [
+      "The main aim of the study was to assess the effect and time course of 4 wk of electrically induced leg training on arterial compliance and endothelial function. Six spinal cord-injured (SCI) individuals participated in 4 wk of daily one-leg functional electrical stimulation (FES) training for 30 min per session. Eight able-bodied individuals served as a control group (C) and were tested on one occasion. Echo Doppler measurements were performed before the FES training and after 1, 2, and 4 wk of training to measure vascular characteristics of femoral artery (FA), brachial artery (BA), and carotid artery (CA)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does acute resistance exercise stimulate sex-specific dimeric immunoreactive growth hormone responses?",
+    "ground_truth": "Heavy resistance exercise increases immunoreactive GH dimer concentrations in men and women, with larger increases in women and more sustained response in men. The physiological significance of a sexually dimorphic GH response adds to the growing literature on aggregate GH and may be explained by differences in sex hormones and the structure of the GH cell network.",
+    "contexts": [
+      "We sought to determine if an acute heavy resistance exercise test (AHRET) would elicit sex-specific responses in circulating growth hormone (GH), with untreated serum and serum treated with a reducing agent to break disulfide-bindings between GH dimers. 19 untrained participants (nine men and ten women) participated in an acute heavy resistance exercise test using the back squat. Blood samples were drawn before exercise (Pre), immediate post (IP), +15 min (+15), and +30 min (+30) afterwards. Serum samples were chemically reduced using glutathione (GSH). ELISAs were then used to compare immunoreactive GH concentrations in reduced (+GSH) and non-reduced (-GSH) samples. Data were analyzed using a three-way (2 sex × 2 treatment × 4 time) mixed methods ANOVA, with significance set at p ≤ 0.05."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does fibroblast growth factor receptor 4 regulate proliferation and antiapoptosis during gastric cancer progression?",
+    "ground_truth": "FGFR4 expression in GC tissue was extremely high. The current results indicated that FGFR4 may contribute to the progression of GC by regulating proliferation and antiapoptosis, indicating that FGFR4 may be a potential, novel drug target against GC.",
+    "contexts": [
+      "Fibroblast growth factor receptor 4 (FGFR4) belongs to the tyrosine kinase receptor family. Little is known about the effect of FGFR4 on gastric cancer (GC). Therefore, the objective of the current study was to elucidate the role of FGFR4 in the tumorigenesis and progression of GC. FGFR4 and some common prognosis markers, including p53, neu, and proliferating cell nuclear antigen (PCNA), were detected in 71 tissue samples from patients with GC using immunohistochemical analysis. In addition, a series of functional assays were carried out using small interfering RNA (siRNA) and included proliferation assays, clone assays, and apoptosis detection."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does up-regulation of leucocytes genes implicated in telomere dysfunction and cellular senescence correlate with depression and anxiety severity scores?",
+    "ground_truth": "Expression of p16(INK4) and STMN1 is a promising biomarker for future epidemiological assessment of the somatic impact of depressive and anxious symptoms, at both clinical and subclinical level in both depressive patients and general population.",
+    "contexts": [
+      "Major depressive disorder (MDD) is frequently associated with chronic medical illness responsible of increased disability and mortality. Inflammation and oxidative stress are considered to be the major mediators of the allostatic load, and has been shown to correlate with telomere erosion in the leucocytes of MDD patients, leading to the model of accelerated aging. However, the significance of telomere length as an exclusive biomarker of aging has been questioned on both methodological and biological grounds. Furthermore, telomeres significantly shorten only in patients with long lasting MDD. Sensitive and dynamic functional biomarkers of aging would be clinically useful to evaluate the somatic impact of MDD. To address this issue we have measured in the blood leucocytes of MDD patients (N=17) and controls (N=16) the expression of two genes identified as robust biomarkers of human aging and telomere dysfunction: p16(INK4a) and STMN1. We have also quantified the transcripts of genes involved in the repair of oxidative DNA damage at telomeres (OGG1), telomere regulation and elongation (TERT), and in the response to biopsychological stress (FOS and DUSP1)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does oral folic acid enhance endothelial function in patients with hypercholesterolaemia receiving statins?",
+    "ground_truth": "Oral administration of folic acid (5 mg) for 4 weeks improves endothelial function in patients with hypercholesterolaemia treated with statins, with possible beneficial effects on the prognosis of these patients.",
+    "contexts": [
+      "Folic acid therapy has been shown to improve endothelial function in patients with familial hypercholesterolaemia via a possible antioxidant mechanism. Data on the possible role of folic acid in hypercholesterolaemic patients receiving statins are lacking. In the present study we tested the hypothesis that folic acid supplementation improves endothelial function in patients with hypercholesterolaemia and treatment with statins. Thirty-four hypercholesterolaemic patients receiving statins participated in the study; all subjects underwent measurement of endothelium-dependent, flow-mediated dilatation of the brachial artery and subsequently randomized to receive 5 mg of the folic acid (n=17) or placebo (n=17) for 4 weeks. Flow-mediated dilatation of the brachial artery was repeated at the end of the 4-week period."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is calcium-sensing receptor gene polymorphism associated with bone mineral density in Italian postmenopausal women?",
+    "ground_truth": "Our data do not support a role of A986S CaR polymorphism in BMD and in the prevalence of fragility fractures in Italian postmenopausal women.",
+    "contexts": [
+      "Calcium-sensing receptor (CaR) is a candidate gene for osteoporosis susceptibility. Several CaR polymorphisms have been identified and an association between the A986S genotype and serum calcium levels has been found in Canadian postmenopausal women. We investigated whether the presence of 986S allele was associated with bone mineral density (BMD) and osteoporotic fractures. The study group consisted of 164 Italian postmenopausal women without fragility fracture (Fx(-)) and 55 women with fracture (Fx(+))."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are hLA-G 3 ' untranslated region polymorphisms associated with systemic lupus erythematosus in 2 Brazilian populations?",
+    "ground_truth": "These results indicate that HLA-G 3'UTR polymorphic sites, particularly +3142G and +3010C alleles, were associated with SLE susceptibility, whereas UTR-1 was associated with protection against development of SLE.",
+    "contexts": [
+      "HLA-G has well recognized tolerogenic properties in physiological and nonphysiological conditions. The 3' untranslated region (3'UTR) of the HLA-G gene has at least 3 polymorphic sites (14-bpINS/DEL, +3142C/G, and +3196C/G) described as associated with posttranscriptional influence on messenger RNA production; however, only the 14-bpINS/DEL and +3142C/G sites have been studied in systemic lupus erythematosus (SLE). We investigated the HLA-G 3'UTR polymorphic sites (14-bpINS/DEL, +3003C/T, +3010C/G, +3027A/C, +3035C/T, +3142C/G, +3187A/G, and +3196C/G) in 190 Brazilian patients with SLE and 282 healthy individuals in allele, genotype, and haplotype analyses. A multiple logistic regression model was used to assess the association of the disease features with the HLA-G 3'UTR haplotypes."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does normalisation of insulin-like growth factor-I improve insulin action in cirrhosis?",
+    "ground_truth": "Because normalisation of IGF-I levels did not affect insulin sensitivity lack of IGF-I is unlikely to result in insulin resistance in cirrhosis. IGF-I supplementation is therefore unlikely to improve insulin action in patients with cirrhosis.",
+    "contexts": [
+      "Cirrhosis of the liver is characterised by insulin resistance and low levels of insulin-like growth factor I (IGF-I). Lack of IGF-I may contribute to this insulin resistance, as IGF-I increases insulin sensitivity. This study aimed to determine the effects of normalisation of IGF-I on insulin action in cirrhosis. This article is a randomised sequence-crossover placebo controlled study. Eight patients with cirrhosis and eight controls were studied following treatment with IGF-I (50 μg/kg twice daily) or saline. Insulin action, glucose utilisation and endogenous glucose production were measured during the euglycaemic hyperinsulinaemic clamp."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is the level of urinary α1 microglobulin excretion a useful marker of peritubular capillaritis in antineutrophil cytoplasmic antibody associated vasculitis?",
+    "ground_truth": "PTC or arteriolitis occurs at a high rate independently of crescentic glomerulonephritis in ANCA-associated vasculitis patients. The levels of u-α1MG excretion reflect the degrees of tubular atrophy and interstitial fibrosis. Moreover, high levels of u-α1MG excretion suggest that PTC is more likely than arteriolitis in ANCA-associated vasculitis patients.",
+    "contexts": [
+      "Antineutrophil cytoplasmic antibody (ANCA) associated vasculitis affects small vessels in the kidney (i.e., arterioles, glomerular or peritubular capillaries, or venules). Although crescentic glomerulonephritis is a common histological finding, the incidence of peritubular capillaritis (PTC) or arteriolitis is unclear. Moreover, the laboratory data that reflect the degree of renal histological damage and distinguish between PTC and arteriolitis have not yet been clarified. We investigated laboratory data and histological findings from 11 patients diagnosed with ANCA-associated vasculitis (2 men and 9 women, mean age 70.3 ± 3.3 years) whose renal biopsies were performed between 2009 and 2014."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are short adult stature and overweight associated with poor intellectual performance in subjects born preterm?",
+    "ground_truth": "Subjects born preterm had poorer intellectual performance than those born at term. Short adult stature or a high BMI was associated with an even higher risk for poor intellectual performance in the subjects born preterm. This indicates the occurrence of common mechanisms underlying growth and cognitive development.",
+    "contexts": [
+      "To study the association between preterm birth and adult intellectual performance, with special emphasis on the influence of postnatal growth. A population-based cohort study was performed on 272,046 males, born between 1973 and 1978, of whom 248,447 were conscripted for military service between 1991 and 1997. Birth characteristics were obtained from the Swedish Medical Birth Register and information on intellectual performance, final height and BMI were taken from the Swedish Conscript Register. Multiple logistic regression analysis was performed."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does pathologic complete response to neoadjuvant chemotherapy with trastuzumab predict for improved survival in women with HER2-overexpressing breast cancer?",
+    "ground_truth": "pCR and lower pathologic stage after neoadjuvant chemotherapy with trastuzumab are the strongest predictors of recurrence and survival and are surrogates of the long-term outcome in patients with HER2-overexpressing disease.",
+    "contexts": [
+      "We sought to determine the prognostic value of pathologic response to neoadjuvant chemotherapy with concurrent trastuzumab. Two hundred and twenty-nine women with HER2/neu (HER2)-overexpressing breast cancer were treated with neoadjuvant chemotherapy plus trastuzumab between 2001 and 2008. Patients were grouped based on pathologic complete response (pCR, n = 114) or less than pCR (<pCR, n = 115); as well as by pathologic stage. Locoregional recurrence-free (LRFS), distant metastasis-free (DMFS), recurrence-free (RFS), and overall survival (OS) rates were compared."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does epoetin requirement depend on dialysis dose when Kt/N > 1.33 in patients on regular dialysis treatment with cellulosic membranes and adequate iron stores?",
+    "ground_truth": "In iron-replete HD patients on cellulosic membranes and stabilized epoetin therapy, inadequate dialysis was associated with higher epoetin requirement, but for Kt/V values > or = 1.33, there was no further effect on epoetin responsiveness.",
+    "contexts": [
+      "An inverse correlation between Kt/V and epoetin requirement has recently been demonstrated in stable hemodialysis (HD) patients with adequate iron stores, dialyzed with cellulosic membranes. However, there is no evidence as to whether or not this effect continues for Kt/V even in the adequate or higher range. We investigated the relationship between Kt/V and the weekly epoetin dose in 85 stable HD patients (age 63 +/- 16 years) treated with bicarbonate HD and unsubstituted cellulose membranes for 6-338 months (median: 70 months)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is fCGR3B copy number variation associated with systemic lupus erythematosus risk in Afro-Caribbeans?",
+    "ground_truth": "Our studies suggest that FCGR3B low copy number is associated with SLE risk in Afro-Caribbean populations independently of CNV due to African ancestry.",
+    "contexts": [
+      "To evaluate FCGR3B copy number variation (CNV) in African and European populations and to determine if FCGR3B copy number is associated with SLE and SLE nephritis risk in Afro-Caribbeans, adjusting for African genetic ancestry. We estimated FCGR3B to determine if there were ethnic variations in CNV (unrelated unadmixed Europeans and Africans). We then examined CNV at FCGR3B in relation to SLE and SLE nephritis within a case-control collection of 134 cases of SLE (37 with SLE nephritis) and 589 population controls of mainly Afro-Caribbean descent resident in Trinidad."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is apolipoprotein E in VLDL and LDL with apolipoprotein C-III associated with a lower risk of coronary heart disease?",
+    "ground_truth": "An increased apoE content in VLDL and LDL with apoC-III was associated with a lower risk of CHD. Strategies to enrich VLDL and LDL in apoE are worth exploring for the prevention of CHD.",
+    "contexts": [
+      "Low-density lipoprotein (LDL) with apolipoprotein C-III (apoC-III) is the lipoprotein species that most strongly predicts initial and recurring coronary heart disease (CHD) events in several cohorts. Thus, a large portion of the CHD risk conferred by LDL may be attributable to LDL that contains apoC-III. Very-low-density lipoprotein (VLDL) and LDL with apoC-III have varying amounts of apoE. We hypothesized that a high content of apoE lessens the adverse influence of apoC-III on the risk of CHD because it promotes the clearance of VLDL and LDL from plasma. We studied 2 independent cohorts, the Nurses' Health Study, composed of women, and the Health Professionals Follow-up Study, composed of men. These cohorts contributed to this study 322 women and 418 men initially free of CVD who developed a fatal or nonfatal myocardial infarction during 10 to 14 years of follow-up and matched controls who remained free of CHD. The apoE content of LDL with apoC-III was inversely associated with CHD after multivariable adjustment (relative risk for top versus bottom quintile 0.53, 95% CI 0.35 to 0.80). The apoE content of VLDL with apoC-III had a similar inverse association with CHD. The highest risks were associated with a high apoB concentration and a low apoE content of LDL with apoC-III or of VLDL+LDL with apoC-III. The observed associations were in both male and female cohorts and independent of traditional CHD risk factors and of C-reactive protein."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does combined light exercise after meal intake suppress postprandial serum triglyceride?",
+    "ground_truth": "Low-intensity exercise on the day of meal intake, particular after intake, can prevent the elevation of postprandial triglyceride concentration in healthy young subjects.",
+    "contexts": [
+      "The effect of exercise performed on the day of meal intake on postprandial triglyceride concentration, which is an independent risk factor for cardiovascular disease, is unclear. The present study investigated the effects of combined low-intensity exercise before and after a high-fat meal on serum triglyceride concentrations. Ten healthy young subjects (four men and six women) consumed a relatively high-fat diet (fat energy ratio: men = 37.8%, women = 39.1%). In the exercise trials, subjects performed brisk walking (2.0 km) after light resistance exercise, either 60 min before or after meal intake. Blood samples were collected before and 2, 4, and 6 h after meal intake."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is increased importin 13 activity associated with the pathogenesis of pterygium?",
+    "ground_truth": "We provided novel evidence that IPO13 may contribute to the pathogenesis of pterygium via modulation of K17 and c-Jun.",
+    "contexts": [
+      "We previously reported that importin 13 (IPO13), a member of the importin-β family of nuclear import proteins, regulates nuclear import of the glucocorticoid receptor in airway epithelial cells, IPO13 serves as a potential marker for corneal epithelial progenitor cells, and IPO13 is associated with corneal cell proliferation. Here we investigated the role of IPO13 in the pathogenesis of pterygium and the underlying mechanism including interaction with other cell proliferation-related factors: keratin 17 (K17), a lesional protein and a member of the type I keratins, and c-Jun, a protein of the activator protein-1 complex. Tissue samples were collected from primary pterygia, recurrent pterygia, and normal conjunctiva to perform the following experiments: immunohistochemical measurement of IPO13 and K17. Pterygium epithelial cells (PECs) were cultured in keratinocyte serum-free defined medium to examine the expression of IPO13 and K17. Lentivirus-mediated silencing and overexpression IPO13 testing was conducted, and K17 alternation was evaluated with western blot and immunostaining. In addition, the translocation of c-Jun (a K17 regulator) was further examined after IPO13 was silenced."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is vitamin D deficiency associated with increased mortality in critically ill patients especially in those requiring ventilatory support?",
+    "ground_truth": "VitD deficiency was associated with increased mortality, poor ventilator outcomes, and increased blood glucose in critically ill patients.",
+    "contexts": [
+      "Vitamin D (VitD) classically recognized for its role in the musculoskeletal system, has been implicated in myriad of conditions such as diabetes, immune dysfunction, cancers, heart disease, metabolic syndrome, etc. We studied the role of VitD in acute care setting and its correlation with mortality. A total of 85 consecutive consenting patients admitted in medical intensive care unit of tertiary care hospital who fulfilled the inclusion criteria were included. All patients were evaluated clinically, and blood samples were collected for hemogram, biochemical investigations including serum calcium, phosphorus, alkaline phosphatase, magnesium, along with 25(OH) VitD, 1,25(OH) VitD and intact parathormone levels. Simplified acute physiology score (SAPS II) was calculated for all patients."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does intranasal administration of oxytocin increase envy and schadenfreude ( gloating )?",
+    "ground_truth": "These results suggest that the oxytocinergic system is involved in modulating envy and gloating. Thus, contrary to the prevailing belief that this system is involved solely in positive prosocial behaviors, it probably plays a key role in a wider range of social emotion-related behaviors.",
+    "contexts": [
+      "Humans have a strong social tendency to compare themselves with others. We tend to feel envious when we receive less valuable rewards and may rejoice when our payoffs are more advantageous. Envy and schadenfreude (gloating over the other's misfortune) are social emotions widely agreed to be a symptom of the human social tendency to compare one's payoffs with those of others. Given the important social components of envy and gloating, we speculated that oxytocin may have a modulating effect on the intensity of these emotions. Fifty-six participants participated in this double-blind, placebo-controlled, within-subject study. Following the administration of oxytocin or a placebo, participants played a game of chance with another (fake) participant who either won more money (envy manipulation), lost more money (schadenfreude manipulation), or won/lost equal amounts of money."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are premenopausal advantages in postprandial lipid metabolism lost in women with type 2 diabetes?",
+    "ground_truth": "The premenopausal advantage in clearance of dietary lipid is not seen in premenopausal diabetic women. This is likely to promote an atherogenic lipoprotein profile and may contribute to the loss of cardiovascular disease protection seen in diabetic women.",
+    "contexts": [
+      "Women with type 2 diabetes appear to lose the protection against cardiovascular disease afforded by estrogens. We examined the effects of menopausal status on postprandial clearance of dietary fat in healthy and diabetic women. Fasting subjects (premenopausal and postmenopausal control subjects, premenopausal and postmenopausal diabetic women, all n = 8) were given a meal containing the stable isotope 1,1,1-(13)C-tripalmitin, with blood and breath sampled for 6 and 24 h, respectively, in the postprandial period. Lower levels of (13)C-palmitic acid ((13)C-PA) in the triglyceride fraction implies more efficient chylomicron clearance, lower levels of (13)C-PA in the nonesterified fatty acid (NEFA) fraction implies improved dietary NEFA entrapment, and higher levels of (13)CO(2) in the breath denote more efficient of oxidation of dietary-derived lipid."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are elevated serum levels of C-reactive protein associated with mania symptoms in outpatients with bipolar disorder?",
+    "ground_truth": "Our results suggest that outpatients with bipolar disorder with mania symptoms have increased levels of CRP as compared to those without mania symptoms and compared to individuals without psychiatric disorders. The long-term consequences of CRP in bipolar disorder should be the subject of future studies.",
+    "contexts": [
+      "We investigated the association between serum levels of C-reactive protein (CRP), a marker of inflammation, and the severity of psychopathology in outpatients with bipolar disorder. We also compared the levels of CRP in the bipolar disorder individuals with those of a non-psychiatric control group. We measured the level of CRP in N=122 outpatients with bipolar disorder and N=165 control individuals and evaluated the symptom severity of the bipolar disorder patients with the Young Mania Rating Scale (YMRS) and the Hamilton Depression Scale (Ham-D)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does hypertriglyceridemic waist phenotype predict increased visceral fat in subjects with type 2 diabetes?",
+    "ground_truth": "The presence of hypertriglyceridemic waist phenotype in subjects with type 2 diabetes identifies a subset with greater degree of visceral adiposity. This subset also has greater degree of subclinical atherosclerosis that may be related to the proatherogenic lipoprotein changes.",
+    "contexts": [
+      "Greater accumulation of visceral fat is strongly linked to risk of cardiovascular disease. However, elevated waist circumference by itself does not always identify individuals with increased visceral fat. We examined 375 subjects with type 2 diabetes from the CHICAGO cohort for presence of hypertriglyceridemic waist phenotype (waist circumference >90 cm in men or >85 cm in women, in conjunction with a plasma triglyceride concentration of > or =177 mg/dl) to determine its usefulness for identifying subjects with increased amounts of visceral fat. We divided subjects into three groups: group 1 (low waist circumference and low triglycerides; waist circumference < or =90 cm in men or < or =85 cm in women and triglyceride <177 mg/dl, n = 18), group 2 (high waist circumference and low triglycerides; waist circumference >90 cm in men or >85 cm in women and triglycerides <177 mg/dl, n = 230), and group 3 (high waist circumference and high triglycerides; waist circumference >90 cm in men or >85 cm in women and triglycerides > or =177 mg/dl, n = 127)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is aortic Fibrosis , Induced by High Salt Intake in the Absence of Hypertensive Response , Reduced by a Monoclonal Antibody to Marinobufagenin?",
+    "ground_truth": "High salt intake in young normotensive rats can induce vascular fibrosis via pressure-independent/MBG-dependent mechanisms, and this remodeling is reduced by immunoneutralization of MBG.",
+    "contexts": [
+      "Marinobufagenin (MBG) is an endogenous Na/K-ATPase inhibitor, a natriuretic and a vasoconstrictor. MBG is implicated in salt-sensitive hypertension, cardiac hypertrophy, and initiate the pro-fibrotic signaling. Previously it was demonstrated that immunoneutralization of an endogenous MBG by 3E9 anti-MBG-antibody (mAb) in vivo lowered blood pressure (BP) and reversed cardiac fibrosis in salt-sensitive, and in partially nephrectomized rats. In the present study, we investigated whether mAb alleviates vascular remodeling induced in normotensive rats on high salt intake. Wistar rats (5 months old) received normal (CTRL; n = 8) or high salt intake (2% NaCl in drinking water) for 4 weeks ( n = 16). Rats from the group on a high salt intake were administered vehicle (SALT; n = 8) or mAb (50 µg/kg) (SALT-AB; n = 8) during the last week of high salt diet. BP, erythrocyte Na/K-ATPase activity, levels of MBG in plasma and 24-hour urine, and sensitivity of aortic explants to the vasorelaxant effect of sodium nitroprusside (SNP) were measured. Aortic collagen abundance was determined immunohistochemically."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is vitamin D2 as effective as vitamin D3 in maintaining circulating concentrations of 25-hydroxyvitamin D?",
+    "ground_truth": "A 1000 IU dose of vitamin D2 daily was as effective as 1000 IU vitamin D3 in maintaining serum 25-hydroxyvitamin D levels and did not negatively influence serum 25-hydroxyvitamin D3 levels. Therefore, vitamin D2 is equally as effective as vitamin D3 in maintaining 25-hydroxyvitamin D status.",
+    "contexts": [
+      "Two reports suggested that vitamin D2 is less effective than vitamin D3 in maintaining vitamin D status. Our objective was to determine whether vitamin D2 was less effective than vitamin D3 in maintaining serum 25-hydroxyvitamin D levels or increased the catabolism of 25-hydroxyvitamin D3."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does peroxisome proliferator-activated receptor-α activation promote macrophage reverse cholesterol transport through a liver X receptor-dependent pathway?",
+    "ground_truth": "Our observations demonstrate that a potent PPARα agonist promotes macrophage RCT in vivo in a manner that is enhanced by human apoA-I expression and dependent on both macrophage PPARα and LXR expression.",
+    "contexts": [
+      "Peroxisome proliferator-activated receptor-α (PPARα) activation has been shown in vitro to increase macrophage cholesterol efflux, the initial step in reverse cholesterol transport (RCT). However, it remains unclear whether PPARα activation promotes macrophage RCT in vivo. We demonstrated that a specific potent PPARα agonist GW7647 inhibited atherosclerosis and promoted macrophage RCT in hypercholesterolemic mice expressing the human apolipoprotein A-I (apoA-I) gene. We compared the effect of GW7647 on RCT in human apoA-I transgenic (hA-ITg) mice with wild-type mice and showed that the PPARα agonist promoted RCT in hA-ITg mice to a much greater extent than in wild-type mice, indicating that human apoA-I expression is important for PPARα-induced RCT. We further investigated the dependence of the macrophage PPARα-liver X receptor (LXR) pathway on the promotion of RCT by GW7647. Primary murine macrophages lacking PPARα or LXR abolished the ability of GW7647 to promote RCT in hA-ITg mice. In concert, the PPARα agonist promoted cholesterol efflux and ATP binding cassette transporter A1/G1 expression in primary macrophages, and this was also by the PPARα-LXR pathway."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are elevated Serum Levels of Alpha-Fetoprotein in Patients with Infantile Hemangioma Derived from within the Tumor?",
+    "ground_truth": "This study demonstrates the association of proliferating IH with elevated serum levels of AFP, which normalized following surgical excision or propranolol treatment. We have shown that IH is not the direct source of AFP. An interaction between the primitive mesoderm-derived IH and the endogenous endodermal tissues, such as the liver, via an intermediary, may explain the elevated serum levels of AFP in infants with extrahepatic IH.",
+    "contexts": [
+      "The embryonic-like stem cell origin of infantile hemangioma (IH) and the observed elevated serum levels of alpha-fetoprotein (AFP) in patients with hepatic IH led us to investigate if this tumor was the source of AFP. We measured serial serum levels of AFP in patients with problematic proliferating IH treated with surgical excision or propranolol treatment. We also investigated the expression of AFP in extrahepatic IH samples using immunohistochemical staining, mass spectrometry, NanoString gene expression analysis, and in situ hybridization."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is cA 15-3 predictive of response and disease recurrence following treatment in locally advanced breast cancer?",
+    "ground_truth": "Elevated CA 15-3 level is predictive of a poor response to chemotherapy. In addition, persistently elevated CA 15-3 levels post chemotherapy in conjunction with lympho-vascular invasion and HER2 status predict a reduced disease free survival following treatment in locally advanced breast cancer.",
+    "contexts": [
+      "Primary chemotherapy (PC) is used for down-staging locally advanced breast cancer (LABC). CA 15-3 measures the protein product of the MUC1 gene and is the most widely used serum marker in breast cancer. We retrospectively investigated the role of CA 15-3 in conjunction with other clinico-pathological variables as a predictor of response and time to disease recurrence following treatment in LABC. Pre and post primary chemotherapy serum concentrations of CA 15-3 together with other variables were reviewed and related to four outcomes following primary chemotherapy (clinical response, pathological response, time to recurrence and time to progression). Persistently elevated CA 15-3 after PC was considered as consecutively high levels above the cut off point during and after PC."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does human APOE4 increase microglia reactivity at Aβ plaques in a mouse model of Aβ deposition?",
+    "ground_truth": "In addition to altering morphological profiles of Aβ deposition, APOE genotype influences Aβ-induced glial activation in the adult EFAD cortex. These data support a role for APOE in modulating Aβ-induced neuroinflammatory responses in AD progression, and support the use of EFAD mice as a suitable model for mechanistic studies of Aβ-associated neuroinflammation.",
+    "contexts": [
+      "Having the apolipoprotein E4 (APOE-ϵ4) allele is the strongest genetic risk factor for the development of Alzheimer's disease (AD). Accumulation of amyloid beta (Aβ) in the brain is influenced by APOE genotype. Transgenic mice co-expressing five familial AD mutations (5xFAD) in the presence of human APOE alleles (ϵ2, ϵ3 or ϵ4) exhibit APOE genotype-specific differences in early Aβ accumulation, suggesting an interaction between APOE and AD pathology. Whether APOE genotype affects Aβ-plaque-associated neuroinflammation remains unclear. In the current study, we address the role of APOE genotype on Aβ-associated microglial reactivity in the EFAD transgenic mouse model. We analyzed Aβ-induced glial activation in the brains of 6-month-old EFAD transgenic mice (E2FAD, E3FAD and E4FAD). Region-specific morphological profiles of Aβ plaques in EFAD brain sections were compared using immunofluorescence staining. We then determined the degree of glial activation in sites of Aβ deposition while comparing levels of the inflammatory cytokine Interleukin-1β (IL-1β) by ELISA. Finally, we quantified parameters of Aβ-associated microglial reactivity using double-stained EFAD brain sections."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is insurance status associated with acuity of presentation and outcomes for thoracic aortic operations?",
+    "ground_truth": "Insurance status was associated with acuity of presentation and major morbidity and mortality for thoracic aortic operations. Efforts to reduce insurance-based disparities in the care of patients with thoracic aortic disease seem warranted and may reduce the incidence of aortic emergencies and improve outcomes after thoracic aortic surgery.",
+    "contexts": [
+      "Nonelective procedure status is the greatest risk factor for postoperative morbidity and mortality in patients undergoing thoracic aortic operations. We hypothesized that uninsured patients were more likely to require nonelective thoracic aortic operation due to decreased access to preventative care and elective surgical services. An observational study of the Society of Thoracic Surgeons Database identified 51 282 patients who underwent thoracic aortic surgery between 2007 and 2011 at 940 North American centers. Patients were stratified by insurance status (private insurance, Medicare, Medicaid, other insurance, or uninsured) as well as age <65 or ≥65 years to account for differences in Medicare eligibility. The need for nonelective thoracic aortic operation was highest for uninsured patients (71.7%) and lowest for privately insured patients (36.6%). The adjusted risks of nonelective operation were increased for uninsured patients (adjusted risk ratio, 1.77; 95% confidence interval, 1.70-1.83 for age <65 years; adjusted risk ratio, 1.46; 95% confidence interval, 1.29-1.62 for age ≥65 years) as well as Medicaid patients aged <65 years (adjusted risk ratio, 1.18; 95% confidence interval, 1.10-1.26) when compared with patients with private insurance. The adjusted risks of major morbidity or mortality were further increased for all patients aged <65 years without private insurance (adjusted risk ratios between 1.13 and 1.27)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is metabolic clearance rate a more robust and physiological parameter for insulin sensitivity than glucose infusion rate in the isoglycemic glucose clamp technique?",
+    "ground_truth": "GIR was rather variable and not proportional to clamped plasma glucose levels. MCR was a less variable parameter than GIR at various plasma glucose levels, and MCR at FPG in the isoglycemic clamp study could be substituted for GIR at the euglycemic clamp study.",
+    "contexts": [
+      "The metabolic clearance rate (MCR) of glucose has been defined as the value of the glucose infusion rate (GIR) divided by the glucose concentration and could be thus expected to be a robust marker at various glucose concentrations. We evaluated the validity of MCR compared with GIR in 15 healthy subjects and 38 type 2 diabetes patients. The glucose clamp technique was performed at two different glucose levels-isoglycemia (fasting plasma glucose [FPG]) of each subject and euglycemia (100 mg/dL), consecutively. GIR and MCR were obtained at both glucose levels, and ratios of those at isoglycemia to euglycemia were calculated."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does nuclear Factor 90 ( NF90 ) targeted to TAR RNA inhibit transcriptional activation of HIV-1?",
+    "ground_truth": "Structural integrity of the TAR element is crucial in HIV-1 gene expression. Our results show that perturbation Tat/TAR RNA interaction by the dsRNA binding protein is sufficient to inhibit transcriptional activation of HIV-1.",
+    "contexts": [
+      "Examination of host cell-based inhibitors of HIV-1 transcription may be important for attenuating viral replication. We describe properties of a cellular double-stranded RNA binding protein with intrinsic affinity for HIV-1 TAR RNA that interferes with Tat/TAR interaction and inhibits viral gene expression. Utilizing TAR affinity fractionation, North-Western blotting, and mobility-shift assays, we show that the C-terminal variant of nuclear factor 90 (NF90ctv) with strong affinity for the TAR RNA, competes with Tat/TAR interaction in vitro. Analysis of the effect of NF90ctv-TAR RNA interaction in vivo showed significant inhibition of Tat-transactivation of HIV-1 LTR in cells expressing NF90ctv, as well as changes in histone H3 lysine-4 and lysine-9 methylation of HIV chromatin that are consistent with the epigenetic changes in transcriptionally repressed gene."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does gH replacement improve quality of life and metabolic parameters in cured acromegalic patients with growth hormone deficiency?",
+    "ground_truth": "In GHD acromegalic patients, GH therapy improved body composition, lipid profile, and quality of life as in patients with GHD due to nonfunctioning pituitary adenoma, without negative effects on glucose metabolism. GH replacement therapy should be considered in these patients, as in patients with GHD from other causes.",
+    "contexts": [
+      "Effects of GH replacement in patients with GH deficiency (GHD) after a cure for acromegaly so far have been poorly studied, although its prevalence among acromegalic patients may reach the 60%. The aim of the study was to evaluate whether metabolic parameters and quality of life are improved by GH replacement in patients with prior acromegaly and severe GHD. This was a prospective study on 42 GHD subjects [22 men, mean age (sd): 48 ± 10]: 10 acromegalics treated with recombinant human GH (group A), 12 acromegalics who refused treatment (group B), and 20 subjects operated for nonfunctioning pituitary adenoma on recombinant human GH (group C). Serum IGF-I levels, lipid profile, glucose levels (fasting and after an oral glucose tolerance test), glycosylated hemoglobin, insulin resistance (homeostasis model assessment insulin resistance index), anthropometric parameters (body mass index, waist circumference, body composition), and quality of life (Questions on Life Satisfaction-Hypopituitarism Z-scores) were evaluated at baseline and after 12 and 36 months."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do simultaneous Aurora-A/STK15 overexpression and centrosome amplification induce chromosomal instability in tumour cells with a MIN phenotype?",
+    "ground_truth": "Our results show that centrosome amplification alone is not sufficient to induce chromosomal instability in colon cancer cells with a MIN phenotype. Alternatively, centrosome amplification has to be associated with alterations in genes regulating mitosis progression such as Aurora-A/STK15 to trigger CIN.",
+    "contexts": [
+      "Genetic instability is a hallmark of tumours and preneoplastic lesions. The predominant form of genome instability in human cancer is chromosome instability (CIN). CIN is characterized by chromosomal aberrations, gains or losses of whole chromosomes (aneuploidy), and it is often associated with centrosome amplification. Centrosomes control cell division by forming a bipolar mitotic spindle and play an essential role in the maintenance of chromosomal stability.However, whether centrosome amplification could directly cause aneuploidy is not fully established. Also, alterations in genes required for mitotic progression could be involved in CIN.A major candidate is represented by Aurora-A/STK15 that associates with centrosomes and is overexpressed in several types of human tumour. Centrosome amplification were induced by hydroxyurea treatment and visualized by immunofluorescence microscopy. Aurora-A/STK15 ectopic expression was achieved by retroviral infection and puromycin selection in HCT116 tumour cells. Effects of Aurora-A/STK15 depletion on centrosome status and ploidy were determined by Aurora-A/STK15 transcriptional silencing by RNA interference. Changes in the expression levels of some mitotic genes were determined by Real time RT-PCR."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does dihydrosphingosine 1-phosphate have a potent antifibrotic effect in scleroderma fibroblasts via normalization of phosphatase and tensin homolog levels?",
+    "ground_truth": "Our findings demonstrate that PTEN deficiency is a critical determinant of the profibrotic phenotype of SSc fibroblasts. The antifibrotic effect of dhS1P is mediated through normalization of PTEN expression, suggesting that dhS1P or its derivatives may be effective as therapeutic antifibrotic agents. The distribution and function of S1P receptors differ in SSc and healthy fibroblasts, suggesting that alteration in the sphingolipid signaling pathway may contribute to SSc fibrosis.",
+    "contexts": [
+      "Previous studies have revealed a phosphatase and tensin homolog (PTEN)-dependent interaction between the sphingolipid agonist dihydrosphingosine 1-phosphate (dhS1P) and the transforming growth factor beta/Smad3 signaling pathway. This study was undertaken to examine responses of systemic sclerosis (SSc) fibroblasts to sphingosine 1-phosphate (S1P) and dhS1P and to gain further insight into the regulation of the S1P/dhS1P/PTEN pathway in SSc fibrosis. Fibroblast cultures were established from skin biopsy samples obtained from patients with SSc and matched healthy controls. Western blotting and quantitative polymerase chain reaction were used to measure protein and messenger RNA levels, respectively. PTEN protein was examined in skin biopsy samples by immunohistochemistry."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does overexpression of angiopoietin-like protein 4 protect against atherosclerosis development?",
+    "ground_truth": "Angptl4 suppresses foam cell formation to reduce atherosclerosis development. Stimulation of Angptl4 in macrophages by oxidized low-density lipoprotein may protect against lipid overload.",
+    "contexts": [
+      "Macrophage foam cells play a crucial role in several pathologies including multiple sclerosis, glomerulosclerosis, and atherosclerosis. Angiopoietin-like protein 4 (Angptl4) was previously shown to inhibit chyle-induced foam cell formation in mesenteric lymph nodes. Here we characterized the regulation of Angptl4 expression in macrophages and examined the impact of Angptl4 on atherosclerosis development. Macrophage activation elicited by pathogen-recognition receptor agonists decreased Angptl4 expression, whereas lipid loading by intralipid and oxidized low-density lipoprotein increased Angptl4 expression. Consistent with an antilipotoxic role of Angptl4, recombinant Angptl4 significantly decreased uptake of oxidized low-density lipoprotein by macrophages, via lipolysis-dependent and -independent mechanisms. Angptl4 protein was detectable in human atherosclerotic lesions and localized to macrophages. Transgenic overexpression of Angptl4 in atherosclerosis-prone apolipoprotein E*3-Leiden mice did not significantly alter plasma cholesterol and triglyceride levels. Nevertheless, Angptl4 overexpression reduced lesion area by 34% (P<0.05). In addition, Angptl4 overexpression decreased macrophage content (-41%; P<0.05) and numbers of monocytes adhering to the endothelium wall (-37%; P<0.01). Finally, plasma Angptl4 was independently and negatively associated with carotid artery sclerosis measured by 3-T MRI in subjects with metabolic syndrome and low-grade systemic inflammation."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is polymorphism of the heat-shock protein gene Hsp70-2 , but not polymorphisms of the IL-10 and CD14 genes , associated with the outcome of Crohn 's disease?",
+    "ground_truth": "Allele A of the Hsp70-2 gene may be associated with a less severe form of CD, suggesting the clinical value of the genotype assessment. The genetic determination of the defense mechanisms in CD appears to be associated with the polymorphism of the Hsp70-2 gene rather than that of the CD14 or IL-10 genes.",
+    "contexts": [
+      "In Crohn's disease (CD) a Th-1 dominant immune reaction is induced, which could be associated with genetic predisposition. Several previous studies have investigated the roles of CD14, heat-shock protein (Hsp)70 and IL-10 gene polymorphisms in the development of the disease. The results are contradictory and inter-racial differences are implicated. Therefore, this phenomenon was evaluated in well-documented Caucasian patients with CD in order to verify the clinical importance of these polymorphisms. The genomic DNA of 133 patients with CD and that of 75 healthy controls were examined. CD was divided into subgroups according to the Vienna classification. An arbitrary classification system based on disease severity was also applied, which was determined according to the therapeutic intervention. The CD14 (-159 C-->T) promoter gene polymorphism was investigated by melting-point analysis. The IL-10 (-1082 G-->A) and Hsp70-2 (1267 A-->G) gene polymorphisms were detected by RFLP (restriction fragment length polymorphism)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is tRPC1 essential for in vivo angiogenesis in zebrafish?",
+    "ground_truth": "These results provide the first in vivo evidence that TRPC1 is essential for angiogenesis, reminiscent of the role of TRPCs in axon guidance. It implicates that TRPC1 may represent a potential target for treating pathological angiogenesis.",
+    "contexts": [
+      "Wiring vascular and neural networks are known to share common molecular signaling pathways. Activation of transient receptor potential type C channels (TRPCs) has recently been shown to underlie chemotropic guidance of neural axons. It is thus of interest to examine whether TRPCs are also involved in vascular development. To determine the role of TRPC1 in angiogenesis in vivo during zebrafish development."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are vitamin D deficiency and secondary hyperparathyroidism common complications in patients with peripheral arterial disease?",
+    "ground_truth": "Patients with PAD IV, especially those who feel severely restricted due to the disease, are at high risk of developing vitamin D deficiency, secondary hyperparathyroidism, and ultimately osteomalacia due to immobilization and subsequent lack of exposure to sunlight, all of which in turn lead to further deterioration. Monitoring of vitamin D metabolism and vitamin D replacement therapy could be a simple, inexpensive approach to mitigating clinical symptoms and improving quality of life in patients with advanced PAD.",
+    "contexts": [
+      "To investigate via the vitamin D status whether patients with peripheral arterial disease (PAD) tend to develop vitamin D deficiency that in turn influences their clinical symptoms. Cross-sectional."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do long-term intermittent hyperoxic exposures enhance erythropoiesis?",
+    "ground_truth": "Daily short-term exposures to normobaric hyperoxia do not increase the [EPO] in healthy individuals. The increased O(2) tension suppresses [EPO]. Hence, administration of pure O(2) to enhance erythropoiesis is not warranted.",
+    "contexts": [
+      "Based on a report of a marked increase in the erythropoietin concentration ([EPO]) a few hours after the cessation of a single 2-h session of O(2) breathing, short periods of O(2) administration have been advocated as a therapy for anaemia. Accordingly, the purpose of the present study was to evaluate this theory by investigating the effect of 10 daily short-term exposures to normobaric O(2) over a 2-week period on the plasma [EPO] in healthy individuals. Twenty men were assigned to either an experimental (NBO(2)) or to a control (AIR) group. The NBO(2) group breathed 100% normobaric O(2) for 2 h every weekday over a 2-week period. The AIR group breathed air within the same time protocol. Blood samples were collected at the pre-, mid- and post-intervention periods to determine [EPO]."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is pain during embryo transfer independently associated with clinical pregnancy in fresh/frozen assisted reproductive technology cycles?",
+    "ground_truth": "Pain during ET is independently associated with the chance of clinical pregnancy. The underlying mechanism could involve factors other than nature of the ET and the psychological state of the patient, and warrants further investigation.",
+    "contexts": [
+      "To assess whether pain experienced during embryo transfer (ET) is associated with the chance of clinical pregnancy in assisted reproductive technology cycles. This was a prospective observational study of 284 women conducted between July 2011 and January 2014. Women under 40 years undergoing in vitro fertilization/intracytoplasmic sperm injection (IVF/ICSI) cycles followed by fresh/frozen ET were recruited. Pain was measured using a 100-mm visual analogue scale. Several factors relating to both pain and also the nature of the ET procedure were recorded: use of vulsellum, uterine contractility, depth of ET, duration of ET catheter insertion, urgency of micturition, psychological profile tests, salivary α-amylase and salivary cortisol. Primary outcome was the achievement of clinical pregnancy."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do polyethylene glycol-diacyllipid micelles demonstrate increased acculumation in subcutaneous tumors in mice?",
+    "ground_truth": "PEG-PE conjugates form very stable, long-circulating micelles. These micelles efficiently accumulate in tumors in vivo an may potentially be used as a tumor-specific delivery system for poorly soluble anticancer drugs.",
+    "contexts": [
+      "The purpose of this work is to study the potential of micelles prepared from amphiphilic polyethelene glycol/phosphatidylethanolamine (PEG-PE) conjugates as a particulate drug delivery system capable of accumulation in tumors via the enhanced permeability and retention (EPR) effect. Micelles were prepared from PEGs of different molecular lengths conjugated with PE. The micelles were characterized by fluorescence-based critical micellization concentration (CMC) measure ments, dynamic light scattering, and HPLC. Blood clearance an tumor accumulation of 111In-labeled micelles were studied in mic with subcutaneously established Lewis lung carcinoma (LLC) and EL4 T lymphoma (EL4) tumors."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do impact of an express admit unit on emergency department length of stay?",
+    "ground_truth": "With an EAU, there was a modest improvement in ED LOS despite an overall increase in daily ED volume.",
+    "contexts": [
+      "Express admit units (EAUs) have been proposed as a way to expedite patient flow through the Emergency Department (ED). We sought to determine the effect of opening a five-bed EAU unit for temporary placement of admitted patients on our ED length of stay (LOS) and waiting room times (WT)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does pinealectomy affect bone mineral density and structure -- an experimental study in sheep?",
+    "ground_truth": "The changes after pinealectomy in sheep are indicative of bone loss. Overall, these findings suggest that the pineal gland may influence bone metabolism and that pinealectomy can be used to induce bone loss in sheep.",
+    "contexts": [
+      "Osteoporosis and associated fractures are a major public health burden and there is great need for a large animal model. Melatonin, the hormone of the pineal gland, has been shown to influence bone metabolism. This study aims to evaluate whether absence of melatonin due to pinealectomy affects the bone mass, structure and remodeling in an ovine animal model. Female sheep were arranged into four groups: Control, surgically ovariectomized (Ovx), surgically pinealectomized (Px) and Ovx+Px. Before and 6 months after surgery, iliac crest biopsies were harvested and structural parameters were measured using μCT. Markers of bone formation and resorption were determined. To evaluate long term changes after pinealectomy, bone mineral density (BMD) was analyzed at the distal radius at 0, 3, 9, 18 and 30 months."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does a genomic and evolutionary approach reveal non-genetic drug resistance in malaria?",
+    "ground_truth": "We provide a three-step model for multi-locus evolution of halofuginone drug resistance in P. falciparum. Informed by genomic approaches, our results provide the first comprehensive view of the evolutionary trajectory malaria parasites take to achieve drug resistance. Our understanding of the multiple genetic and non-genetic mechanisms of drug resistance informs how we will design and pair future anti-malarials for clinical use.",
+    "contexts": [
+      "Drug resistance remains a major public health challenge for malaria treatment and eradication. Individual loci associated with drug resistance to many antimalarials have been identified, but their epistasis with other resistance mechanisms has not yet been elucidated. We previously described two mutations in the cytoplasmic prolyl-tRNA synthetase (cPRS) gene that confer resistance to halofuginone. We describe here the evolutionary trajectory of halofuginone resistance of two independent drug resistance selections in Plasmodium falciparum. Using this novel methodology, we discover an unexpected non-genetic drug resistance mechanism that P. falciparum utilizes before genetic modification of the cPRS. P. falciparum first upregulates its proline amino acid homeostasis in response to halofuginone pressure. We show that this non-genetic adaptation to halofuginone is not likely mediated by differential RNA expression and precedes mutation or amplification of the cPRS gene. By tracking the evolution of the two drug resistance selections with whole genome sequencing, we further demonstrate that the cPRS locus accounts for the majority of genetic adaptation to halofuginone in P. falciparum. We further validate that copy-number variations at the cPRS locus also contribute to halofuginone resistance."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does interferon beta-1b reduce black holes in a randomised trial of clinically isolated syndrome?",
+    "ground_truth": "Although the rate of lesions that converted to PBH showed no significant differences between groups, the numbers of PBHs per patient out of new lesions was significantly lower in IFNB-1b patients compared to patients on placebo.",
+    "contexts": [
+      "Multiple sclerosis (MS) is characterised by inflammatory lesions of the central nervous system. Interferon beta-1b (IFNB-1b) has been shown to improve clinical and magnetic resonance imaging (MRI) measures for patients with MS. To evaluate whether IFNB-1b in patients presenting with clinically isolated syndromes (CIS) prevented persisting T1 hypointensities on MRI (persistent black holes (PBHs))."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do the Presence and Duration of Overweight Are Associated with Low-Grade Inflammation in Prepubertal Chilean Children?",
+    "ground_truth": "Overweight at 7 years of age was associated with low-grade inflammation only in the case of recent onset. Inflammatory disturbances may be associated with the early phases of excess weight.",
+    "contexts": [
+      "Overweight is associated with low-grade inflammation, but it is under debate whether the effect of fat mass accumulation is acute or chronic. We aimed to study the association of overweight duration with low-grade inflammation in children in whom overweight initiation can be established. Observational longitudinal study, including a subsample of 250 Chilean children from the Growth and Obesity Cohort Study followed-up yearly since preschool age (n = 1195). At 4 years, 324 children provided blood. From those, 272 participants were evaluated at 7 years. The current analysis includes 250 children with a blood sample at 4 and 7 years of age and C-reactive protein (CRP) <5 mg/L. Anthropometric data (0-4 years) were obtained from health records and measured thereafter; sex- and age-specific body mass index Z-scores (BAZ) were computed. Among overweight (BAZ ≥ 1) participants at 7 years, the duration of overweight (time since diagnosis) was computed and categorized according to tertiles: <36, 36-<72, or ≥72 months. The independent association between overweight (diagnosis and duration) and low-grade inflammation (CRP ≥ 1 mg/L) was studied (logistic regression models)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does prevalence and correlate of psychiatric symptoms in north korean defectors?",
+    "ground_truth": "Somatization and depression were the most prevalent psychiatric symptoms in NKDs. Our results suggest that psychiatric symptoms accompany certain sociodemographic and clinical characteristics that are associated with susceptibility to acculturation stressors. An understanding of these factors will be helpful providing appropriate mental health services to NKDs.",
+    "contexts": [
+      "The aim of the present study is to assess the prevalence of psychiatric symptoms and associated factors in North Korean Defectors (NKDs). One hundred forty-four NKDs (male: 20; female: 124; average age: 40.4±11.7 yrs.) completed the Symptom Checklist-90-Revised (SCL-90-R) and the Center for Epidemiologic Studies Depression scale (CES-D). A stepwise logistic regression analysis was conducted to evaluate factors associated with the psychiatric symptoms of the participants."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is the effect of vecuronium enhanced by a large rather than a modest dose of gentamicin as compared with no preoperative gentamicin?",
+    "ground_truth": "We demonstrated that the neuromuscular relaxant effect of vecuronium is enhanced by a large (4 mg/kg) rather than a modest (1.2 mg/kg) dose of gentamicin as compared with no gentamicin given before surgery.",
+    "contexts": [
+      "We compared the effect of two doses of gentamicin versus no gentamicin (NG) given before surgery on the neuromuscular relaxant effect of vecuronium. Seventy patients (intraabdominal procedures) were randomly allocated to receive preoperative large-dose (4 mg/kg) gentamicin (LD), a modest dose (1.2 mg/kg) of gentamicin (MD), or NG. No more than one dose of gentamicin was given before the vecuronium administration. Serum gentamicin levels, the time for 25% recovery of the first twitch in the train-of-four after a bolus of vecuronium, and the time from cessation of the vecuronium infusion to extubation of the trachea were estimated. Serum gentamicin levels were higher (P < 0.001) for LD than MD. The time for 25% recovery of the first twitch after the vecuronium bolus was slightly longer with LD than MD (P = 0.06) and longer in LD than NG (P = 0.001) (42.9 +/- 23.6 min versus 36.2 +/- 17 min and 27.4 +/- 9 min, respectively). The time to extubation was similar with LD and MD and longer for LD than NG (P = 0.008) (34.7 +/- 19.2 min versus 27.4 +/- 19.3 min and 19.4 +/- 10.1 min, respectively). The differences in these times were insignificant between MD and NG. Gentamicin administered as a LD rather than MD enhanced the neuromuscular blockade of vecuronium as compared with NG given before surgery."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does anterior segment changes after pilocarpine and laser iridotomy for primary angle-closure suspect with Scheimpflug photography?",
+    "ground_truth": "Scheimpflug photography demonstrates significant anterior segment changes after pilocarpine and after LPI in primary angle-closure suspects.",
+    "contexts": [
+      "To assess changes in Scheimpflug-based measurements of the anterior segment after pilocarpine administration and prophylactic laser peripheral iridotomy in narrow anterior chamber angles. Thirty-seven eyes in 37 patients with occludable angles were included in this prospective interventional case series. Primary angle-closure suspects (iridotrabecular contact in 3 quadrants or more) were enrolled. Patient evaluation included indentation gonioscopy, Goldmann tonometry, and optic nerve examination. The mean of 3 consecutive Pentacam measurements was taken at baseline, 45 minutes after 2% pilocarpine administration, and 1 month after laser peripheral iridotomy (LPI). Anterior chamber angle (ACA), anterior chamber volume (ACV), anterior chamber depth (ACD), pupil diameter, central corneal thickness, and intraocular pressure were measured."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does early Erythropoietin Administration Increase the Risk of Retinopathy in Preterm Infants?",
+    "ground_truth": "EPO administration did not significantly increase the risk of ROP of any stage reported or Stage ≥3. Further clinical trials investigating the impact of EPO on ROP in premature infants should include all confounding factors to clarify this important issue.",
+    "contexts": [
+      "Erythropoietin (EPO) administration prevents anemia of prematurity and may be associated with a significant increase in the risk of retinopathy of prematurity (ROP) in preterm infants. Nonetheless, early EPO treatment may prevent damage following retinal neovascularization. The aim of this meta-analysis was to elucidate whether EPO administration increases the risk of ROP. We searched MEDLINE, PubMed, CINAHL (Cumulative Index to Nursing and Allied Health Literature), and the Cochrane Central Register of Controlled Trials with no language restrictions. Randomized controlled trials that reported the association between EPO treatment in preterm infants and ROP were eligible. All of the included studies were stratified into two groups according to the age of initiation of EPO treatment: before 8 days of age (early EPO), and 8-28 days of age (late EPO)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does genome-wide association study identify variants associated with progression of liver fibrosis from HCV infection?",
+    "ground_truth": "Our GWA study identified several susceptibility loci for HCV-induced liver fibrosis; these were linked to genes that regulate apoptosis. Apoptotic control might therefore be involved in liver fibrosis.",
+    "contexts": [
+      "Polymorphisms in IL28B were shown to affect clearance of hepatitis C virus (HCV) infection in genome-wide association (GWA) studies. Only a fraction of patients with chronic HCV infection develop liver fibrosis, a process that might also be affected by genetic factors. We performed a 2-stage GWA study of liver fibrosis progression related to HCV infection. We studied well-characterized HCV-infected patients of European descent who underwent liver biopsies before treatment. We defined various liver fibrosis phenotypes on the basis of METAVIR scores, with and without taking the duration of HCV infection into account. Our GWA analyses were conducted on a filtered primary cohort of 1161 patients using 780,650 single nucleotide polymorphisms (SNPs). We genotyped 96 SNPs with P values <5 × 10(-5) from an independent replication cohort of 962 patients. We then assessed the most interesting replicated SNPs using DNA samples collected from 219 patients who participated in separate GWA studies of HCV clearance."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are step activity and stride-to-stride fluctuations negatively correlated in individuals with transtibial amputation?",
+    "ground_truth": "The negative correlation evident at these two joints demonstrates that increased stride-to-stride fluctuations are related to decreased activity levels, however it remains unclear whether these changes in the stride-to-stride fluctuations promote decreased activity or whether less active individuals do not gain sufficient motor learning experience to achieve a skilled movement.",
+    "contexts": [
+      "Variability occurs naturally from stride to stride in healthy gait. It has been shown that individuals with lower limb loss have significantly increased stride-to-stride fluctuations during walking. This is considered indicative of movement disorganization and is associated with less healthy movement. Given that lower limb prosthesis users perform on average less physical activity than able bodied individuals, the purpose of this study was to determine whether increased fluctuations also correspond to a reduced level of activity in daily life. Twenty-two transtibial amputees wore an activity monitor (Actigraph, Pensacola, FL, USA) for 3 weeks. Lower limb kinematics during treadmill walking were measured using a 12-camera motion capture system. The largest Lyapunov exponent (λ) was calculated bilaterally at the ankle, knee and hip to quantify the stride-to-stride fluctuations of the lower limb joints. Pearson correlations were used to identify the relationships between the average daily step count over the 3 week collection period and λ."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do accelerated orthodontic tooth movement following le fort I osteotomy in a rodent model?",
+    "ground_truth": "Le Fort I osteotomy significantly accelerated the rate of orthodontic tooth movement. Histologically, more active and extensive bone remodeling was observed after osteotomy.",
+    "contexts": [
+      "In surgery-first accelerated orthognathic surgery, the clinical phenomenon of accelerated orthodontic tooth movement after osteotomy is a benefit compared with the conventional approach. However, because much of the literature on this phenomenon is based on empirical evidence and case reports, experimental animal-based studies are needed to verify and quantify this acceleration effect. The purpose of this prospective experimental study was to identify whether osteotomy procedures increase tooth movement. Le Fort I osteotomies were performed on the left maxillas in 15 male adult Sprague-Dawley rats. After surgery, a continuous force of 0.5 N was placed on the maxillary left first molar to move the tooth mesially. Another 15 rats had no surgery and served as controls. On days 1, 14, and 28, digital caliper measurements were taken to record tooth movement."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do [ Analysis of distribution characteristics and drug resistance of 2748 strains of pathogens isolated from burn patients ]?",
+    "ground_truth": "The three dominant pathogens that cause infection in burn patients hospitalized in Institute of Burn Research of Southwest Hospital in recent years are PA, SA, and AB in order. PA and AB are outstandingly multidrug-resistant among the isolated strains. AB might replace PA as the main pathogenic bacterium that cause the death of burn patients with infection.",
+    "contexts": [
+      "To provide epidemiological data of the distribution characteristics and drug resistance of the pathogens isolated from burn patients in recent years for guiding rational use of antibiotics in clinic. Totally 2748 strains of pathogens were isolated from 1977 specimens (blood, catheter, wound excretion, etc.) collected from 478 patients hospitalized in Institute of Burn Research of Southwest Hospital from March 2003 to June 2011. After being identified by API strips, drug resistance of the 2748 isolated pathogens to 55 commonly-used antibiotics including gentamicin, tobramycin, piperacillin, amikacin, etc. was tested by K-B paper disk diffusion method. The WHONET 5.3 software was used to analyze the following subjects: the distribution of the pathogens with different types and different sources each year, the changes in drug-resistant rates of Gram negative bacilli, Gram positive cocci, and fungi to several antibiotics, and the changes in sensitive rates of Pseudomonas aeruginosa (PA), Staphylococcus aureus (SA), Acinetobacter baumannii (AB), Candida albicans (CA) to several antibiotics."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does instant Typing be Essential to Detect Transmission of Extended-Spectrum Beta-Lactamase-Producing Klebsiella Species?",
+    "ground_truth": "Clonal outbreaks of ESBL-producing Klebsiella species were detected in our hospital. Theoretically, after Raman spectroscopy had detected a cluster of n ≥ 2, six infections in secondary patients could have been prevented. These findings demonstrate that spread of ESBL-producing Klebsiella species occurs, even in a non-outbreak setting, and underscore the need for routine rapid typing of these MDR bacteria.",
+    "contexts": [
+      "Infections with multidrug-resistant (MDR) microorganisms are an increasing threat to hospitalized patients. Although rapid typing of MDR microorganisms is required to apply targeted prevention measures, technical barriers often prevent this. We aimed to assess whether extended-spectrum beta-lactamase (ESBL)-producing Klebsiella species are transmitted between patients and whether routine, rapid typing is needed. For 43 months, the clonality of all ESBL-producing Klebsiella isolates from patients admitted to Erasmus MC University Medical Center in Rotterdam, the Netherlands was assessed with Raman spectroscopy. A cluster was defined as n ≥ 2 patients who had identical isolates. Primary patients were the first patients in each cluster. Secondary patients were those identified with an isolate clonally related to the isolate of the primary patient."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does the effect of reminder call in reducing non-attendance rates at care of the elderly clinics?",
+    "ground_truth": "A preclinic phone call reminder to elderly patients is feasible, increases attendance rates, and identifies vacant appointments. Patients with dementia are more likely to miss clinic appointments; therefore they and their carers need specific reminders about appointment dates.",
+    "contexts": [
+      "DNA (\"did not attend\") at outpatient clinics is an important problem costing the NHS an estimated pound266 million annually. The national DNA rate for 1996-1997 for all clinics was 12%. The DNA rate at Hammersmith Hospital for the same year in the care of the elderly specialty was 21%. The aim of this study was to establish why this was so, and to test the efficacy of a reminder call in increasing attendance rates at care of the elderly clinics. 23 DNAs from seven clinics were contacted to ascertain the reasons for non-attendance (group I). For seven further clinics, 84 patients were contacted in advance to reconfirm their appointment (group II)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do prostacyclin analogs stimulate receptor-mediated cAMP synthesis and ATP release from rabbit and human erythrocytes?",
+    "ground_truth": "This study establishes that the IP receptor is present on rabbit and human erythrocytes and that its activation results in increases in cAMP and ATP release. These results suggest a novel mechanism by which PGI(2) and its active analogs, when administered pharmacologically, could produce vasodilation.",
+    "contexts": [
+      "The purpose of this study was to establish that the prostacyclin (PGI(2)) receptor (IP receptor) is present on rabbit and human erythrocytes and that its activation stimulates cyclic adenosine monophosphate (cAMP) synthesis and adenosine triphosphate (ATP) release. The effect of incubation of erythrocytes with the active PGI(2) analogs, iloprost or UT-15C, on cAMP levels and ATP release was determined in the absence and presence of the IP receptor antagonist, CAY10441. Western analysis was used to determine the presence of the IP receptor on isolated membranes. To establish that effects of PGI(2) analogs were not due to prostaglandin E(2)(PGE(2)) receptor activation, the effect of PGE(2) on cAMP levels and ATP release was determined."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do environmental and genetic factors influence age at menarche in women with polycystic ovary syndrome?",
+    "ground_truth": "Age at menarche in women with PCOS is influenced by BMI and genetic variants near LIN28B.",
+    "contexts": [
+      "We hypothesized that body mass index (BMI) and DNA variants would predict age at menarche in polycystic ovarian syndrome (PCOS). Subjects aged 18-45 years with PCOS defined by the National Institutes of Health criteria (n=522) and controls with regular menstrual cycles and no hyperandrogenism (n=472) were studied."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are physical characteristics of the back predictive of low back pain in healthy workers : a prospective study?",
+    "ground_truth": "This study showed that, in a population of young workers wh no or limited antecedents of LBP at baseline, physical examinations, as routinely assessed in occupational medicine, are not useful to predict workers at risk for the development of back disorders one year later.",
+    "contexts": [
+      "In the working population, back disorders are an important reason for sick leave and permanent work inability. In the context of fitting the job to the worker, one of the primary tasks of the occupational health physician is to evaluate the balance between work-related and individual variables. Since this evaluation of work capacity often consists of a physical examination of the back, the objective of this study was to investigate whether a physical examination of the low back, which is routinely performed in occupational medicine, predicts the development of low back pain (LBP). This study is part of the Belgian Low Back Cohort (BelCoBack) Study, a prospective study to identify risk factors for the development of low back disorders in occupational settings. The study population for this paper were 692 young healthcare or distribution workers (mean age of 26 years) with no or limited back antecedents in the year before inclusion. At baseline, these workers underwent a standardised physical examination of the low back. One year later, they completed a questionnaire on the occurrence of LBP and some of its characteristics. To study the respective role of predictors at baseline on the occurrence of LBP, we opted for Cox regression with a constant risk period. Analyses were performed separately for workers without any back antecedents in the year before inclusion ('asymptomatic' workers) and for workers with limited back antecedents in the year before inclusion ('mildly symptomatic' workers)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does cediranib inhibit both the intraosseous growth of PDGF D-positive prostate cancer cells and the associated bone reaction?",
+    "ground_truth": "These novel findings support the utilization of cediranib, either alone or in combination with docetaxel, to treat bone metastatic PCa exhibiting PDGF D expression.",
+    "contexts": [
+      "The major cause of death in prostate cancer (PCa) cases is due to distant metastatic lesions, with the bone being the most prevalent site for secondary colonization. Utilization of small molecule inhibitors to treat bone metastatic PCa have had limited success either as monotherapies or in combination with other chemotherapeutics due to intolerable toxicities. In the current study, we developed a clinically relevant in vivo intraosseous tumor model overexpressing the platelet-derived growth factor D (PDGF D) to test the efficacy of a newly characterized vascular endothelial growth factor receptor (VEGFR)/PDGFR inhibitor, cediranib (also called AZD2171). An intratibial-injection model was established utilizing DU145 cells with or without increased PDGF D expression. Tumor-bearing mice were treated by daily gavage administration of cediranib and/or weekly i.p. injection of docetaxel for 7 weeks. Tibiae were monitored by in vivo/ex vivo X-rays and histomorphometry analysis was performed to estimate tumor volume and tumor-associated trabecular bone growth."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do bone marrow-derived microglia infiltrate into the paraventricular nucleus of chronic psychological stress-loaded mice?",
+    "ground_truth": "Chronic PS induces the infiltration of bone marrow-derived microglia into PVN, and it is conceivable that the MCP-1/CCR2 axis in PVN and the SDF-1/CXCR4 axis in bone marrow are involved in this mechanism.",
+    "contexts": [
+      "Microglia of the central nervous system act as sentinels and rapidly react to infection or inflammation. The pathophysiological role of bone marrow-derived microglia is of particular interest because they affect neurodegenerative disorders and neuropathic pain. The hypothesis of the current study is that chronic psychological stress (chronic PS) induces the infiltration of bone marrow-derived microglia into hypothalamus by means of chemokine axes in brain and bone marrow. Here we show that bone marrow-derived microglia specifically infiltrate the paraventricular nucleus (PVN) of mice that received chronic PS. Bone marrow derived-microglia are CX3CR1(low)CCR2(+)CXCR4(high), as distinct from CX3CR1(high)CCR2(-)CXCR4(low) resident microglia, and express higher levels of interleukin-1β (IL-1β) but lower levels of tumor necrosis factor-α (TNF-α). Chronic PS stimulates the expression of monocyte chemotactic protein-1 (MCP-1) in PVN neurons, reduces stromal cell-derived factor-1 (SDF-1) in the bone marrow and increases the frequency of CXCR4(+) monocytes in peripheral circulation. And then a chemokine (C-C motif) receptor 2 (CCR2) or a β3-adrenoceptor blockade prevents infiltration of bone marrow-derived microglia in the PVN."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is intra-abdominal injury easily overlooked in the patients with concomitant unstable hemodynamics and pelvic fractures?",
+    "ground_truth": "In the management of hemodynamically unstable patients with concomitant pelvic fractures, greater attention should be paid to associated IAIs. Early CT imaging is encouraged after the patient's hemodynamic status is stabilized with TAE.",
+    "contexts": [
+      "Transcatheter arterial embolization (TAE) is usually necessary in the management of hemodynamically unstable patients with concomitant pelvic fractures. Given the critical conditions of such patients, TAE is at times performed only according to the results of a primary evaluation without computed tomographic (CT) imaging. Therefore, the evaluation of associated intra-abdominal injuries (IAIs) might be insufficient. Clinically, some patients have required post-TAE laparotomy due to further deterioration. In this study, we attempted to determine a feasible protocol for post-TAE observation. This study focused on patients who received TAE to achieve hemostasis of retroperitoneal hemorrhage and who did not undergo CT imaging due to their unstable hemodynamics. The characteristics of patients with and without associated IAIs requiring post-TAE laparotomy were compared. We also analyzed the effects of the timing of post-TAE CT imaging on patients with IAIs requiring surgery."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is domestic smoke exposure associated with alveolar macrophage particulate load?",
+    "ground_truth": "Particulate load observed in macrophages is associated with the reported type of biomass fuel exposure. Macrophage function in relation to respiratory health should now be investigated in biomass smoke exposed subjects.",
+    "contexts": [
+      "Indoor air pollution is associated with impaired respiratory health. The pre-dominant indoor air pollutant to which two billion of the world's population is exposed is biomass fuel smoke. We tested the hypothesis that reported smoke exposure in men and women is associated with increased alveolar macrophage uptake of biomass smoke particulates. Healthy volunteers attending for research bronchoscopy in Malawi completed a questionnaire assessment of smoke exposure. Particulate matter visible in alveolar macrophages (AM) was quantified using digital image analysis. The geometric mean of the percentage area of the cytoplasm occupied by particulates in 50 cover-slip adherent AM was calculated and termed particulate load."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does intestinal mucus layer preservation in female rats attenuate gut injury after trauma-hemorrhagic shock?",
+    "ground_truth": "The resistance of female rats to T/HS-induced intestinal injury and dysfunction was associated with better preservation of the intestinal mucus barrier and was to some extent estrus cycle-dependent. Preservation of the mucus barrier may protect against shock-induced gut injury and subsequent distant organ injury by limiting the ability of luminal contents such as bacteria and digestive enzymes from coming into direct contact with the epithelium.",
+    "contexts": [
+      "We tested the hypothesis that females are more resistant to trauma-hemorrhagic shock (T/HS)-induced gut injury than males, and this is related to better preservation of their intestinal mucus layer, which is influenced in turn by the estrus cycle stage at the time of injury. Male, proestrus and diestrus female rats underwent a laparotomy (trauma) and 90 minutes of shock ( approximately 35 mm Hg). At 3 hours after reperfusion, terminal ileum was harvested and stained with Carnoy's Alcian Blue for mucus assessment, hematoxylin and eosin, and periodic acid schiff for villous and goblet cell morphology and injury. Ileal permeability was measured in separate intestinal segments using the ex vivo everted gut sac technique."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is phospholipase C-beta4 essential for the progression of the normal sleep sequence and ultradian body temperature rhythms in mice?",
+    "ground_truth": "These lines of evidence indicate that impaired LGNd relay, possibly mediated via group-1 mGluR, may underlie irregular sleep sequences and ultradian body temperature rhythms in PLC-beta4-/- mice.",
+    "contexts": [
+      "THE SLEEP SEQUENCE: i) non-REM sleep, ii) REM sleep, and iii) wakefulness, is stable and widely preserved in mammals, but the underlying mechanisms are unknown. It has been shown that this sequence is disrupted by sudden REM sleep onset during active wakefulness (i.e., narcolepsy) in orexin-deficient mutant animals. Phospholipase C (PLC) mediates the signaling of numerous metabotropic receptors, including orexin receptors. Among the several PLC subtypes, the beta4 subtype is uniquely localized in the geniculate nucleus of thalamus which is hypothesized to have a critical role in the transition and maintenance of sleep stages. In fact, we have reported irregular theta wave frequency during REM sleep in PLC-beta4-deficient mutant (PLC-beta4-/-) mice. Daily behavioral phenotypes and metabotropic receptors involved have not been analyzed in detail in PLC-beta4-/- mice, however. Therefore, we analyzed 24-h sleep electroencephalogram in PLC-beta4-/- mice. PLC-beta4-/- mice exhibited normal non-REM sleep both during the day and nighttime. PLC-beta4-/- mice, however, exhibited increased REM sleep during the night, their active period. Also, their sleep was fragmented with unusual wake-to-REM sleep transitions, both during the day and nighttime. In addition, PLC-beta4-/- mice reduced ultradian body temperature rhythms and elevated body temperatures during the daytime, but had normal homeothermal response to acute shifts in ambient temperatures (22 degrees C-4 degrees C). Within the most likely brain areas to produce these behavioral phenotypes, we found that, not orexin, but group-1 metabotropic glutamate receptor (mGluR)-mediated Ca(2+) mobilization was significantly reduced in the dorsal lateral geniculate nucleus (LGNd) of PLC-beta4-/- mice. Voltage clamp recordings revealed that group-1 mGluR-mediated currents in LGNd relay neurons (inward in wild-type mice) were outward in PLC-beta4-/- mice."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is silencing of claudin-11 associated with increased invasiveness of gastric cancer cells?",
+    "ground_truth": "These data suggest that hypermethylation of CLDN11, leading to downregulated expression, contributes to gastric carcinogenesis by increasing cellular motility and invasiveness. A further understanding of the mechanisms underlying the role of claudin proteins in gastric carcinogenesis will likely help in the identification of novel approaches for diagnosis and therapy of gastric cancer.",
+    "contexts": [
+      "Claudins are membrane proteins that play critical roles in tight junction (TJ) formation and function. Members of the claudin gene family have been demonstrated to be aberrantly regulated, and to participate in the pathogenesis of various human cancers. In the present study, we report that claudin-11 (CLDN11) is silenced in gastric cancer via hypermethylation of its promoter region. Levels of CLDN11 methylation and mRNA expression were measured in primary gastric cancer tissues, noncancerous gastric mucosae, and cell lines of gastric origin using quantitative methylation-specific PCR (qMSP) and quantitative reverse transcriptase-PCR (qRT-PCR), respectively. Analyses of paired gastric cancers and adjacent normal gastric tissues revealed hypermethylation of the CLDN11 promoter region in gastric cancers, and this hypermethylation was significantly correlated with downregulation of CLDN11 expression vs. normal tissues. The CLDN11 promoter region was also hypermethylated in all gastric cancer cell lines tested relative to immortalized normal gastric epithelial cells. Moreover, CLDN11 mRNA expression was inversely correlated with its methylation level. Treatment of CLDN11-nonexpressing gastric cancer cells with 5-aza-2'-deoxycytidine restored CLDN11 expression. Moreover, siRNA-mediated knockdown of CLDN11 expression in normal gastric epithelial cells increased their motility and invasiveness."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does miR-130b play an oncogenic role by repressing PTEN expression in esophageal squamous cell carcinoma cells?",
+    "ground_truth": "The results indicate that miR-130b plays an oncogenic role in ESCC cells by repressing PTEN expression and Akt phosphorylation, which would be helpful in developing miRNA-based treatments for ESCC.",
+    "contexts": [
+      "Esophageal carcinoma is one of the most common malignancies with high cancer-related morbidity and mortality worldwide. MicroRNAs (miRNAs) are a class of small non-coding RNAs that regulate a wide variety of cellular processes, and also play an important role in the development and progression of cancers. In a previous microarray study, we demonstrated that miR-130b was upregulated in esophageal squamous cell carcinoma (ESCC) tissues. However, the biologic functions and the molecular mechanism of miR-130b in ESCC remain to be elucidated. qRT-PCR assays were used to quantify miR-130b expression levels in ESCC samples. Novel targets of miR-130b were identified via a bioinformatics search and confirmed using a dual-luciferase reporter system. Western blotting and qRT-PCR assays were used to quantify the expression of the target gene PTEN (phosphatase and tensin homolog) and the downstream effector, Akt. ESCC cells over- or underexpressing miR-130b were analyzed for in vitro biologic functions."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does subchronic exposure to arsenic induce apoptosis in the hippocampus of the mouse brains through the Bcl-2/Bax pathway?",
+    "ground_truth": "These results indicate that subchronic exposure to As induces apoptosis in the hippocampus of mice by disturbing normal Bax/Bcl-2 regulatory pathways. Meanwhile, it is suggested that the induced apoptosis in the hippocampus may be at least partly responsible for As-induced neurotoxicity.",
+    "contexts": [
+      "The aim of this study was to identify whether arsenic (As) exposure could induce hippocampal neural apoptosis in vivo. Sixty-four mice were randomly divided into 4 groups of 16 each. Group 1 orally received drinking water alone as a control. Groups 2-4 were given arsenic trioxide (As2O3) orally at the doses of 1 ppm, 2 ppm and 4 ppm, respectively. All the treatments continued for 60 days. Morphological changes in the hippocampus were observed by HE staining. Apoptosis in the hippocampus was examined by TUNEL assay and transmission electron microscopy. The expression levels of Bcl-2 and Bax genes and their proteins in the hippocampus were determined by real-time PCR and Western blotting. The activity of caspase-3 was determined by spectrophotometry."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does cip1 inhibit DNA replication but not PCNA-dependent nucleotide excision-repair?",
+    "ground_truth": "Cip1 can potentially inhibit DNA replication in Xenopus egg extracts by inhibiting the cyclin-dependent kinase function required for the initiation of replication forks, and also by inhibiting PCNA function. The inhibition of PCNA is selective for its function in DNA replication, however, as Cip1 does not affect PCNA function in nucleotide excision-repair. The induction of Cip1 in response to DNA damage, therefore, allows repair to continue in the genome under conditions in which replication is severely inhibited.",
+    "contexts": [
+      "DNA that is damaged by ultraviolet (UV) light is repaired predominantly by nucleotide excision-repair, a process requiring the DNA polymerase auxiliary factor PCNA. UV-irradiation also induces the production of Cip1 protein via activation of p53. Cip1 is an inhibitor of the cyclin-dependent kinases, which are required for the cell cycle to proceed through the G1/S-phase transition and initiate DNA replication. Inhibition by Cip1 probably causes the block to initiation of DNA replication that is seen in irradiated cells. Cip1 also directly inhibits the function of PCNA during DNA synthesis. As nucleotide excision-repair requires PCNA, the physiological relevance of PCNA inhibition by Cip1 is currently unclear. We show that nucleotide excision-repair of UV-damaged DNA occurs in extracts of Xenopus eggs, and that this reaction is PCNA-dependent. The repair reaction is not inhibited by Cip1, even when the level of PCNA is reduced 100-fold so that it becomes limiting for DNA repair. By contrast, Cip1 strongly suppresses the function of PCNA in replicative DNA synthesis under these conditions."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does transcriptional profiling of peripheral blood mononuclear cells in pancreatic cancer patients identify novel genes with potential diagnostic utility?",
+    "ground_truth": "In summary, we report the first in-depth comparison of global gene expression profiles of PBMCs between PC patients and healthy controls. We have also identified a gene predictor set that can potentially be developed further for use in diagnostic algorithms in PC. Future directions of this research should include analysis of PBMC expression profiles in patients with chronic pancreatitis as well as increasing the number of early-stage patients to assess the utility of PBMCs in the early diagnosis of PC.",
+    "contexts": [
+      "It is well known that many malignancies, including pancreatic cancer (PC), possess the ability to evade the immune system by indirectly downregulating the mononuclear cell machinery necessary to launch an effective immune response. This knowledge, in conjunction with the fact that the trancriptome of peripheral blood mononuclear cells has been shown to be altered in the context of many diseases, including renal cell carcinoma, lead us to study if any such alteration in gene expression exists in PC as it may have diagnostic utility. PBMC samples from 26 PC patients and 33 matched healthy controls were analyzed by whole genome cDNA microarray. Three hundred eighty-three genes were found to be significantly different between PC and healthy controls, with 65 having at least a 1.5 fold change in expression. Pathway analysis revealed that many of these genes fell into pathways responsible for hematopoietic differentiation, cytokine signaling, and natural killer (NK) cell and CD8+ T-cell cytotoxic response. Unsupervised hierarchical clustering analysis identified an eight-gene predictor set, consisting of SSBP2, Ube2b-rs1, CA5B, F5, TBC1D8, ANXA3, ARG1, and ADAMTS20, that could distinguish PC patients from healthy controls with an accuracy of 79% in a blinded subset of samples from treatment naïve patients, giving a sensitivity of 83% and a specificity of 75%."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is glasgow prognostic score related to blood transfusion requirements and post-operative complications in hepatic resection for hepatocellular carcinoma?",
+    "ground_truth": "GPS reflects preoperative patient status, and is associated with blood transfusion and pulmonary complications in elective hepatic resection for HCC.",
+    "contexts": [
+      "Systemic inflammation before surgery, as evidenced by the Glasgow prognostic score (GPS), predicts postoperative complications and cancer-specific survival in various types of cancer. The aim of this study was to evaluate the significance GPS in hepatic resection for hepatocellular carcinoma (HCC). Sixty-six patients who underwent elective hepatic resections for HCC were include in the study. Patients were classified into three groups: GPS 0 [C-reactive protein (CRP)≤1.0 mg/dl and serum albumin ≥3.5 g/dl, n = 54], GPS 1 [CRP >1.0 mg/dl or serum albumin <3.5 g/dl, n = 11], and GPS 2 [CRP>1.0 mg/dl and serum albumin <3.5 g/dl, n = 1]. We retrospectively examined the association between GPS (0 or 1) and perioperative clinical variables and outcome."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does serotonin receptor blockade increase food intake and body weight after total gastrectomy in rats?",
+    "ground_truth": "Inhibition of food intake by serotonin might contribute to early satiety and loss of body weight after total gastrectomy.",
+    "contexts": [
+      "Total gastrectomy often results in early satiety and loss of body weight. Serotonin inhibits food intake, and postprandial serotonin release is increased after total gastrectomy. Serotonin might contribute to early satiety and loss of body weight after total gastrectomy. Food intake and body weight were investigated with an automated recording system in gastrectomized rats 1-12 months postoperatively. Rats were treated with metergoline, a 5-hydroxytryptamine (5-HT)(1/2) receptor antagonist, two different 5-HT(3) receptor antagonists, a combination of metergoline and devazepide, a cholecystokinin (CCK) a receptor antagonist, or vehicle. In addition, metergoline or vehicle was applied continuously by an intraperitoneal osmotic minipump for 7, 28, or 84 days after total gastrectomy."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does ritonavir interact with bortezomib to enhance protein ubiquitination and histone acetylation synergistically in renal cancer cells?",
+    "ground_truth": "The combination of ritonavir and bortezomib inhibits renal cancer growth synergistically. The effectiveness of the combination is caused by protein ubiquitination and histone acetylation. Our results provide a rationale for investigating the combination in patients with renal cancer.",
+    "contexts": [
+      "To investigate the combined effects of the HIV protease inhibitor ritonavir and proteasome inhibitor bortezomib on renal cancer cells. Ritonavir induces endoplasmic reticulum (ER) stress and we hypothesized that inhibiting proteasome activity under ER stress would further inhibit cancer cell growth by enhancing protein ubiquitination. The effectiveness of the combination of ritonavir and bortezomib on renal cancer cells (Caki-1, ACHN, 786-O, 769-P) was assessed by MTS assay, colony formation assay, cell cycle analysis, and annexin-V assay. In vivo efficacy was evaluated using mice subcutaneous tumor models. Induction of ER stress, protein ubiquitination, histone acetylation, and changes in the expression of histone deacetylase (HDAC) were evaluated by Western blotting."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does bile-acid-activated farnesoid X receptor regulate hydrogen sulfide production and hepatic microcirculation?",
+    "ground_truth": "These results demonstrate that CSE is an FXR-regulated gene and provide a new molecular explanation for the pathophysiology of portal hypertension.",
+    "contexts": [
+      "To investigate whether the farnesoid X receptor (FXR) regulates expression of liver cystathionase (CSE), a gene involved in hydrogen sulfide (H(2)S) generation. The regulation of CSE expression in response to FXR ligands was evaluated in HepG2 cells and in wild-type and FXR null mice treated with 6-ethyl chenodeoxycholic acid (6E-CDCA), a synthetic FXR ligand. The analysis demonstrated an FXR responsive element in the 5'-flanking region of the human CSE gene. The function of this site was investigated by luciferase reporter assays, chromatin immunoprecipitation and electrophoretic mobility shift assays. Livers obtained from rats treated with carbon tetrachloride alone, or in combination with 6-ethyl chenodeoxycholic acid, were studied for hydrogen sulphide generation and portal pressure measurement."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does poor glycemic control increase risk of hospitalization in urban African Americans with diabetes?",
+    "ground_truth": "In this predominantly African American patient sample with diabetes, poorer glycemic control increased the chances of hospitalization due to diabetes. Continued efforts to aggressively control hyperglycemia could decrease the need for a diabetes hospitalization in this population.",
+    "contexts": [
+      "Hospitalizations due to diabetes are more frequent among African Americans, but risk factors are not known. We analyzed data from an urban African American patient population to identify variables associated with hospitalizations attributable principally to diabetes. Demographic, disease, and metabolic characteristics on patients seen in an outpatient diabetes clinic during 1991 to 1997 were extracted from an electronic patient tracking system. Data were linked to a statewide hospital discharge dataset to capture all in-state hospitalizations from 1998 to 2001. Persons who required a hospitalization for diabetes were compared to the remainder of individuals in the database."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is severity of OSA an independent predictor of incident atrial fibrillation hospitalization in a large sleep-clinic cohort?",
+    "ground_truth": "OSA diagnosis and severity are independently associated with incident AF. Clinical trials are required to determine if treatment of OSA will reduce the burden of AF.",
+    "contexts": [
+      "OSA is a common condition that has been associated with atrial fibrillation (AF), but there is a paucity of data from large longitudinal cohorts to establish whether OSA is a risk factor for AF independent of obesity and other established risk factors. We studied patients attending a sleep clinic referred for in-laboratory polysomnography for possible OSA between 1989 and 2001. Whole-population hospital data in Western Australia for 1970 to 2009 were linked to sleep study cases to determine incident AF hospitalization to 2009. Cox regression analyses were used to assess the independent association of OSA with incident AF."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Are novel somatic mutations in primary hyperaldosteronism related to the clinical , radiological and pathological phenotype?",
+    "ground_truth": "KCNJ5-mutant tumours appear to be associated with fasciculata-like clear cell predominant histology and tend to be larger with a characteristic imaging phenotype. Novel somatic KCNJ5 variants likely cause adenomas by loss of potassium selectivity, similar to previously described mutations.",
+    "contexts": [
+      "Aldosterone-producing adenomas (APAs) and bilateral adrenal hyperplasia are important causes of secondary hypertension. Somatic mutations in KCNJ5, CACNA1D, ATP1A1, ATP2B3 and CTNNB1 have been described in APAs. To characterize clinical-pathological features in APAs and unilateral adrenal hyperplasia, and correlate them with genotypes."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is digoxin therapy associated with improved survival in epithelial ovarian cancer : A SEER-Medicare database analysis?",
+    "ground_truth": "In this SEER-Medicare database analysis, digoxin use during chemotherapy was not associated with improved OS outcomes in patients with epithelial ovarian cancer treated with surgery and platinum chemotherapy. These conclusions are limited, however, by a small sample size and bias intrinsic to claims-based data and should be further evaluated in a larger cohort.",
+    "contexts": [
+      "Both in vitro and clinical trial data suggest that cardiac glycosides demonstrate a synergistic anti-tumor effect when administered with platinum chemotherapy. Epidemiologic studies have also demonstrated improved cancer survival in colorectal, breast, head and neck and hepatocellular carcinoma patients on digoxin therapy at the time of cancer treatment. We sought to determine whether digoxin improves survival in epithelial ovarian cancer patients treated with platinum. Surveillance, Epidemiology and End-Results (SEER) tumor registries program data on ovarian cancer patients diagnosed in 2007-2009 were linked to Medicare claims data to capture platinum administration, digoxin use and cardiac comorbidities. We analyzed 762 patients who underwent cancer-directed surgery and received platinum chemotherapy. Patients were considered digoxin users during platinum administration if a prescription was filled within 6months of cancer diagnosis. Cox proportional hazards regression models were used to determine the impact of digoxin use on overall survival (OS)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do [ Efficacy of auto-trilevel positive airway ventilation in hypercapnic patients with overlap syndrome ]?",
+    "ground_truth": "Auto-trilevel PAP ventilation is superior to fixed BiPAP ventilation in the treatment of hypercapnic OS since this novel PAP mode can achieve a higher efficacy in simultaneous removal of residual apnea hypopnea events and correction of hypercapnia and yield a higher sleep quality and lower daytime sleepiness.",
+    "contexts": [
+      "To observe the efficacy of auto-trilevel positive airway pressure (Auto-trilevel PAP) ventilation in overlap syndrome (OS) patients with hypercapnia. From October 2012 to May 2014, 21 OS patients with a PaCO2> 45 mmHg (1 mmHg = 0.133 kPa) and coexisting stable chronic obstructive pulmonary diseases (COPD) and moderate-to-severe OSAS were recruited. Three different positive airway pressure (PAP) modes of ventilators (SOMNOvent auto-S, Weinmann Inc, Germany) were employed for 8 hours per night with each mode at each night and two nights' interval without any treatment among different modes. Under mode one, the expiratory positive airway pressure (EPAP) issued by bilevel positive airway pressure (BiPAP) was titrated as the minimal positive pressure for a disappearance of snoring. The same inspiratory positive airway pressure (IPAP) titrated by end tidal CO2 levels under mode 1 was used under modes 2 and 3 as well. However, the EPAP issued by BiPAP under mode 2 was 3 cmH2O (1 cmH2O = 0.098 kPa) higher than that under mode 1. Under mode 3 with autotrilevel PAP, the beginning of EPAP was set the same as that under mode 1 while the end of EPAP (EEPAP) was automatically adjusted based on upper airway patency condition. Comparisons were made for parameters before and after treatment as well as among different ventilation modes. The following parameters were compared such as nocturnal apnea hypopnea index (AHI), minimal SpO2 (miniSpO2), arousal index, sleep efficiency, morning PaCO2 and Epworth sleepiness score (ESS)."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does day of Surgery affect Length of Stay and Charges in Primary Total Hip and Knee Arthroplasty?",
+    "ground_truth": "Late week TJA cases, older age, and increasing severity of illness score were associated with increased LOS. Furthermore, late week TKA was associated with increased total charges.",
+    "contexts": [
+      "Length of hospital stay (LOS) is a large driver of cost after primary total joint arthroplasty (TJA). Strategies to decrease LOS may help reduce the economic burden of TJA. This study's aim was to investigate the effect of day of the week of surgery on mean LOS and total charges following primary total knee arthroplasty (TKA) and total hip arthroplasty (THA). An administrative clinical database at a large US health care system was reviewed for all primary THA and TKA admissions performed between 2010 and 2012 (n = 15,237). Of these, 14,800 cases met our inclusion criteria and were analyzed. Furthermore, the cohort was divided into early (Monday/Tuesday) and late week (Thursday/Friday) surgeries, excluding Wednesday surgeries (n = 2835). Univariate and multiple regression analyses examined the effect of each variable on LOS."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Do [ Analysis of the peer reviewed papers published in Shanghai Journal of Stomatology between 2001 and 2005 ]?",
+    "ground_truth": "Shanghai Journal of Stomatology is one of the most important information sources on stomatology.",
+    "contexts": [
+      "To analyze the characteristics of publications of Shanghai Journal of Stomatology (SJS) between 2001 and 2005. By use of literature metrology, a comprehensive analysis of the publications of Shanghai Journal of Stomatology from 2001 to 2005 was made."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is obesity negatively associated with prostate-specific antigen in U.S. men , 2001-2004?",
+    "ground_truth": "Our population-based, nationally representative results expand the validity of previous studies on obesity and PSA. Higher weight, BMI, waist circumference, triceps skinfold, and total body water are associated with moderately lower PSA values. A prospective study is needed to verify whether this association affects the accuracy of the PSA test in obese men.",
+    "contexts": [
+      "Recent studies have shown a negative association between body mass index (BMI) and prostate-specific antigen (PSA), a commonly used serum marker for the detection and diagnosis of prostate cancer. We have examined the association between several anthropometric measures and PSA in a nationally representative sample of men. We analyzed data from the 2001-2004 National Health and Nutrition Examination Survey. Participants in this study were men ages >or=40 years without previously diagnosed prostate cancer who had PSA measured. Height, weight, waist circumference, BMI, triceps skinfold, subscapular skinfold, and calculated total body water were examined categorically by quintiles using multiple linear regression models. All tests of significance were two sided."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Is sexual abuse in irritable bowel syndrome : to ask or not to ask -- that the question?",
+    "ground_truth": "Physicians identify significant barriers to pursuing an inquiry into abuse. However, a minority cited 'clinical irrelevance' as a primal barrier, the implicit statement being that the abuse history has clinical relevance. This view is consistent with opinion leaders and published treatment recommendations. Therefore, by not inquiring into the abuse history, physicians are not fulfilling their ethical responsibility to the patient. Physicians need to resolve their barriers to inquiry. Furthermore, they need to familiarize themselves with treatment recommendations and include this review in their consultation.",
+    "contexts": [
+      "Irritable bowel syndrome (IBS) is a common and costly disorder in Canada. The paucity of medical treatment underscores the importance of examining every element of the management approach. Data exist supporting an increased prevalence of abuse among individuals with IBS. Importantly, the pathophysiology underlying the link between abuse and IBS is increasingly understood. Treatment recommendations by opinion leaders support an abuse inquiry. However, many clinicians view abuse inquiry as an ethical dilemma. Canadian gastroenterologists were surveyed to determine current practice patterns and to identify barriers to inquiry. Barriers cited by clinicians were explored within an ethical context."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  },
+  {
+    "question": "Does advanced Age Worsen Recovery or Long-Term Morbidity After Postmastectomy Breast Reconstruction?",
+    "ground_truth": "Older women who undergo PMBR have physical and upper body well-being that is similar to younger women. In addition, their perception of recovery from PMBR is at least as good as that seen in younger women. Older women contemplating PMBR should be counseled that they are not at higher risk for long-term physical and upper body morbidity from PMBR than are younger women.",
+    "contexts": [
+      "Despite evidence that older women have quality-of-life outcomes similar to younger women after postmastectomy breast reconstruction (PMBR), they rarely receive it. There is a perception that PMBR in older women may result in significant physical morbidity. However, the effects of age on physical morbidity after PMBR have not been studied. This study sought to assess perceptions of recovery from surgery and long-term chest and upper body morbidity in older women who receive PMBR. Women with American Joint Committee on Cancer stage 0-III breast cancer who underwent a mastectomy with PMBR between 2005 and 2011 were surveyed to assess their functional health status (DUKE), physical well-being (BREAST-Q), and perceptions of recovery from surgery. Patients were stratified into 2 age groups: older (≥65 years) and younger (<65 years). Outcome scores were compared by mastectomy laterality, reconstruction type, and between age groups. Data were analyzed using χ² and t tests."
+    ],
+    "metadata": {
+      "domain": "medical",
+      "source": "pubmedqa"
+    }
+  }
+]

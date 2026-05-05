@@ -2,7 +2,7 @@
 Optional cross-encoder reranker to re-score retrieved chunks.
 Uses a lightweight cross-encoder that runs on CPU in ~100ms per query.
 """
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 
 _reranker = None  # lazy-loaded
@@ -11,8 +11,11 @@ _reranker = None  # lazy-loaded
 def _get_reranker():
     global _reranker
     if _reranker is None:
+        import os
         from sentence_transformers import CrossEncoder
-        _reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+        force_cpu = os.environ.get("DOCSIGHT_FORCE_CPU") == "1"
+        device = "cpu" if force_cpu else None  # None = auto-detect
+        _reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2", device=device)
     return _reranker
 
 
