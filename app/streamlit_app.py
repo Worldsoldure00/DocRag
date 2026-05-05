@@ -54,9 +54,11 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 /* Domain pill badges */
 .badge-finance { background:#1565C0; color:#fff; padding:3px 10px;
                  border-radius:20px; font-size:11px; font-weight:600; }
-.badge-medical { background:#1B5E20; color:#fff; padding:3px 10px;
+.badge-medical { background: #3b185f; color: #d4b5ff; padding:3px 10px;
                  border-radius:20px; font-size:11px; font-weight:600; }
 .badge-both    { background:#E65100; color:#fff; padding:3px 10px;
+                 border-radius:20px; font-size:11px; font-weight:600; }
+.badge-web     { background: #1a365d; color: #90cdf4; padding:3px 10px;
                  border-radius:20px; font-size:11px; font-weight:600; }
 
 /* Source cards */
@@ -95,7 +97,7 @@ for msg in st.session_state["messages"]:
         if msg["role"] == "assistant":
             meta = msg.get("meta", {})
             domain = meta.get("domain", "")
-            badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both") else ""
+            badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both", "web") else ""
             if badge_cls:
                 st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
             pct = round(meta.get("confidence", 0) * 100, 1)
@@ -112,9 +114,11 @@ for msg in st.session_state["messages"]:
             sources = msg["sources"]
             fin_srcs = [s for s in sources if s["metadata"].get("domain") == "finance"]
             med_srcs = [s for s in sources if s["metadata"].get("domain") == "medical"]
+            web_srcs = [s for s in sources if s["metadata"].get("domain") == "web"]
             all_groups = []
             if fin_srcs: all_groups.append(("📊 Finance", fin_srcs))
             if med_srcs: all_groups.append(("🏥 Medical", med_srcs))
+            if web_srcs: all_groups.append(("🌐 Web Search", web_srcs))
             if not all_groups: all_groups = [("Sources", sources)]
 
             with st.expander(f"📄 Sources ({len(sources)} retrieved)"):
@@ -124,6 +128,8 @@ for msg in st.session_state["messages"]:
                         m = src["metadata"]
                         if m.get("domain") == "finance":
                             header = f"**[{i+1}]** `{m.get('source', 'Finance Document')}`"
+                        elif m.get("domain") == "web":
+                            header = f"**[{i+1}]** 🌐 [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
                         else:
                             title = m.get('title', 'Medical Document')
                             journal = m.get('journal', 'PubMed')
@@ -174,7 +180,7 @@ if prompt := st.chat_input("Ask a question"):
         sources    = state.get("all_sources", [])
 
         # Domain badge + confidence
-        badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both") else ""
+        badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both", "web") else ""
         if badge_cls:
             st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
         pct = round(confidence * 100, 1)
@@ -189,9 +195,11 @@ if prompt := st.chat_input("Ask a question"):
         if sources:
             fin_srcs = [s for s in sources if s["metadata"].get("domain") == "finance"]
             med_srcs = [s for s in sources if s["metadata"].get("domain") == "medical"]
+            web_srcs = [s for s in sources if s["metadata"].get("domain") == "web"]
             all_groups = []
             if fin_srcs: all_groups.append(("📊 Finance", fin_srcs))
             if med_srcs: all_groups.append(("🏥 Medical", med_srcs))
+            if web_srcs: all_groups.append(("🌐 Web Search", web_srcs))
             if not all_groups: all_groups = [("Sources", sources)]
 
             with st.expander(f"📄 Sources ({len(sources)} retrieved)"):
@@ -201,6 +209,8 @@ if prompt := st.chat_input("Ask a question"):
                         m = src["metadata"]
                         if m.get("domain") == "finance":
                             header = f"**[{i+1}]** `{m.get('source', 'Finance Document')}`"
+                        elif m.get("domain") == "web":
+                            header = f"**[{i+1}]** 🌐 [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
                         else:
                             title = m.get('title', 'Medical Document')
                             journal = m.get('journal', 'PubMed')
