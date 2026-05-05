@@ -116,12 +116,12 @@ for msg in st.session_state["messages"]:
             med_srcs = [s for s in sources if s["metadata"].get("domain") == "medical"]
             web_srcs = [s for s in sources if s["metadata"].get("domain") == "web"]
             all_groups = []
-            if fin_srcs: all_groups.append(("📊 Finance", fin_srcs))
-            if med_srcs: all_groups.append(("🏥 Medical", med_srcs))
-            if web_srcs: all_groups.append(("🌐 Web Search", web_srcs))
+            if fin_srcs: all_groups.append(("Finance", fin_srcs))
+            if med_srcs: all_groups.append(("Medical", med_srcs))
+            if web_srcs: all_groups.append(("Web Search", web_srcs))
             if not all_groups: all_groups = [("Sources", sources)]
 
-            with st.expander(f"📄 Sources ({len(sources)} retrieved)"):
+            with st.expander(f"Sources ({len(sources)} retrieved)"):
                 for group_label, grp in all_groups:
                     st.markdown(f"###### {group_label}")
                     for i, src in enumerate(grp):
@@ -129,7 +129,7 @@ for msg in st.session_state["messages"]:
                         if m.get("domain") == "finance":
                             header = f"**[{i+1}]** `{m.get('source', 'Finance Document')}`"
                         elif m.get("domain") == "web":
-                            header = f"**[{i+1}]** 🌐 [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
+                            header = f"**[{i+1}]** [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
                         else:
                             title = m.get('title', 'Medical Document')
                             journal = m.get('journal', 'PubMed')
@@ -151,11 +151,41 @@ if prompt := st.chat_input("Ask a question"):
 
     # Run pipeline
     with st.chat_message("assistant"):
-        with st.spinner("Routing query and retrieving sources…"):
-            t0 = time.time()
+        t0 = time.time()
+        state = {}
+        with st.status("Initializing Pipeline...", expanded=True) as status_box:
             try:
-                from src.agents.graph import run_query
-                state = run_query(prompt)
+                from src.agents.graph import stream_query
+                
+                # Iterate through the graph execution
+                for step_dict in stream_query(prompt):
+                    # step_dict format: {"node_name": AgentState}
+                    for node, node_state in step_dict.items():
+                        state = node_state  # Keep track of the latest state
+                        
+                        if node == "router":
+                            status_box.update(label="Router Agents classifying domain...")
+                            st.write(f"Classified query as: **{state.get('domain', 'unknown').upper()}**")
+                        
+                        elif node == "finance_agent":
+                            status_box.update(label="Finance Expert searching SEC filings...")
+                            st.write("Searching the Finance SEC Index...")
+                            
+                        elif node == "medical_agent":
+                            status_box.update(label="Medical Expert searching PubMed documents...")
+                            st.write("Searching the Medical PubMed Index...")
+                            
+                        elif node == "web_agent":
+                            status_box.update(label="Local sources insufficient. Web Fallback scraping DuckDuckGo...")
+                            st.write("Running live web search...")
+                            
+                        elif node == "synthesizer":
+                            status_box.update(label="Synthesizer is drafting the final answer...")
+                            st.write("Synthesizing context into final response...")
+
+                # Done streaming
+                status_box.update(label="Pipeline Complete", state="complete", expanded=False)
+
                 try:
                     import torch
                     if torch.cuda.is_available():
@@ -166,6 +196,9 @@ if prompt := st.chat_input("Ask a question"):
                 elapsed = time.time() - t0
             except Exception as e:
                 elapsed = time.time() - t0
+                status_box.update(label="Pipeline Failed", state="error", expanded=True)
+                st.error(f"Error: {e}")
+                import traceback
                 err_tb = traceback.format_exc()
                 with open("pipeline_error.log", "a") as _f:
                     _f.write(err_tb + "\n")
@@ -197,12 +230,12 @@ if prompt := st.chat_input("Ask a question"):
             med_srcs = [s for s in sources if s["metadata"].get("domain") == "medical"]
             web_srcs = [s for s in sources if s["metadata"].get("domain") == "web"]
             all_groups = []
-            if fin_srcs: all_groups.append(("📊 Finance", fin_srcs))
-            if med_srcs: all_groups.append(("🏥 Medical", med_srcs))
-            if web_srcs: all_groups.append(("🌐 Web Search", web_srcs))
+            if fin_srcs: all_groups.append(("Finance", fin_srcs))
+            if med_srcs: all_groups.append(("Medical", med_srcs))
+            if web_srcs: all_groups.append(("Web Search", web_srcs))
             if not all_groups: all_groups = [("Sources", sources)]
 
-            with st.expander(f"📄 Sources ({len(sources)} retrieved)"):
+            with st.expander(f"Sources ({len(sources)} retrieved)"):
                 for group_label, grp in all_groups:
                     st.markdown(f"###### {group_label}")
                     for i, src in enumerate(grp):
@@ -210,7 +243,7 @@ if prompt := st.chat_input("Ask a question"):
                         if m.get("domain") == "finance":
                             header = f"**[{i+1}]** `{m.get('source', 'Finance Document')}`"
                         elif m.get("domain") == "web":
-                            header = f"**[{i+1}]** 🌐 [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
+                            header = f"**[{i+1}]** [{m.get('title', 'Web Source')}]({m.get('url', '#')})"
                         else:
                             title = m.get('title', 'Medical Document')
                             journal = m.get('journal', 'PubMed')

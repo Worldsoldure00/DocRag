@@ -173,6 +173,22 @@ def get_app():
     return _app
 
 
+def stream_query(query: str):
+    """Convenience wrapper — yield state updates as the graph runs."""
+    app = get_app()
+    initial_state: AgentState = {
+        "query":          query,
+        "domain":         "",
+        "finance_result": None,
+        "medical_result": None,
+        "web_result":     None,
+        "final_answer":   "",
+        "all_sources":    [],
+        "confidence":     0.0,
+        "error":          None,
+    }
+    return app.stream(initial_state)
+
 def run_query(query: str) -> AgentState:
     """Convenience wrapper — run a single query through the full graph."""
     app = get_app()
