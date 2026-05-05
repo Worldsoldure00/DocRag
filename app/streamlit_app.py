@@ -17,8 +17,7 @@ import streamlit as st
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="DocSight RAG",
-    page_icon="🔍",
+    page_title="Multi-Agent",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -82,7 +81,7 @@ if "messages" not in st.session_state:
 # ── Header row ────────────────────────────────────────────────────────────────
 h_col, btn_col = st.columns([8, 1])
 with h_col:
-    st.markdown("# Multi-agent RAG")
+    st.markdown("# Multi-Agent RAG")
    # st.caption("Multi-agent Q&A over SEC filings & medical literature — powered by LangGraph + FAISS")
 with btn_col:
     if st.button("🗑️ Clear", use_container_width=True):
@@ -97,9 +96,12 @@ for msg in st.session_state["messages"]:
         if msg["role"] == "assistant":
             meta = msg.get("meta", {})
             domain = meta.get("domain", "")
-            badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both", "web") else ""
-            if badge_cls:
-                st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
+            if domain == "both":
+                st.markdown('<span class="badge-finance">FINANCE</span> <span class="badge-medical">MEDICAL</span>', unsafe_allow_html=True)
+            else:
+                badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "web") else ""
+                if badge_cls:
+                    st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
             pct = round(meta.get("confidence", 0) * 100, 1)
             filled = int(pct / 5)
             bar = "█" * filled + "░" * (20 - filled)
@@ -213,9 +215,12 @@ if prompt := st.chat_input("Ask a question"):
         sources    = state.get("all_sources", [])
 
         # Domain badge + confidence
-        badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "both", "web") else ""
-        if badge_cls:
-            st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
+        if domain == "both":
+            st.markdown('<span class="badge-finance">FINANCE</span> <span class="badge-medical">MEDICAL</span>', unsafe_allow_html=True)
+        else:
+            badge_cls = f"badge-{domain}" if domain in ("finance", "medical", "web") else ""
+            if badge_cls:
+                st.markdown(f'<span class="{badge_cls}">{domain.upper()}</span>', unsafe_allow_html=True)
         pct = round(confidence * 100, 1)
         filled = int(pct / 5)
         bar = "█" * filled + "░" * (20 - filled)

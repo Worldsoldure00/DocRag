@@ -8,11 +8,11 @@ import config
 
 log = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """You are a query router for a document Q&A system.
+SYSTEM_PROMPT = """You are an intelligent query router for a document Q&A system.
 Given a user question, classify it into exactly ONE of these domains:
-- finance   → questions about companies, stocks, SEC filings, earnings, revenue, financial ratios
-- medical   → questions about diseases, drugs, treatments, clinical trials, symptoms, biology
-- both      → question explicitly spans financial AND medical topics
+- finance   → purely financial topics (companies, stocks, SEC filings, earnings, revenue).
+- medical   → purely medical topics (diseases, drugs, treatments, clinical trials, symptoms).
+- both      → the question contains BOTH financial concepts (e.g. cost, impact, market, finance) AND medical concepts (e.g. clinical, severe hypertension, treatment). If you see a disease/treatment AND a financial term like 'cost' or 'market impact', you MUST choose 'both'.
 
 Respond with ONLY one word: finance, medical, or both. No explanation."""
 
