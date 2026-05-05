@@ -29,4 +29,6 @@ def rerank(query: str, docs: list[Document], top_k: int = 5) -> list[Document]:
     scores   = reranker.predict(pairs)
 
     ranked = sorted(zip(scores, docs), key=lambda x: x[0], reverse=True)
-    return [doc for _, doc in ranked[:top_k]]
+    # Drop irrelevant documents (ms-marco cross-encoder outputs logits; negative means irrelevant)
+    relevant_docs = [doc for score, doc in ranked[:top_k] if score > 0.0]
+    return relevant_docs

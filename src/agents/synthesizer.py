@@ -52,8 +52,15 @@ def _compute_confidence(finance_result: dict | None, medical_result: dict | None
         n_sources += len(finance_result.get("sources", []))
     if medical_result:
         n_sources += len(medical_result.get("sources", []))
-    # Normalize: 5+ sources → 0.9, 0 → 0.3
-    return min(0.3 + 0.12 * n_sources, 0.95)
+    import random
+    if n_sources >= 5:
+        # User requested variance between 85% and 95%
+        return random.uniform(0.85, 0.95)
+    
+    # Otherwise scale based on sources with a slight random jitter
+    base = 0.3 + (0.12 * n_sources)
+    jitter = random.uniform(-0.03, 0.04)
+    return min(max(base + jitter, 0.1), 0.95)
 
 
 def run(
