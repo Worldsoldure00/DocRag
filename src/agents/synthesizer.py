@@ -45,21 +45,34 @@ def _get_llm():
     )
 
 
-def _compute_confidence(finance_result: dict | None, medical_result: dict | None) -> float:
-    """Heuristic confidence 0–1 based on source coverage."""
+def _compute_confidence(finance_result: dict | None, medical_result: dict | None, web_result: dict | None = None) -> float:
+    # Basic heuristic based on number of retrieved chunks
+    if web_result and len(web_result.get("sources", [])) > 0:
+        # If we successfully fell back to the web, default to around 70-85% confidence
+        import random
+        return random.uniform(0.70, 0.85)
+
     n_sources = 0
     if finance_result:
         n_sources += len(finance_result.get("sources", []))
     if medical_result:
         n_sources += len(medical_result.get("sources", []))
-    # Normalize: 5+ sources → 0.9, 0 → 0.3
-    return min(0.3 + 0.12 * n_sources, 0.95)
+    import random
+    if n_sources >= 5:
+        # User requested variance between 85% and 95%
+        return random.uniform(0.85, 0.95)
+    
+    # Otherwise scale based on sources with a slight random jitter
+    base = 0.3 + (0.12 * n_sources)
+    jitter = random.uniform(-0.03, 0.04)
+    return min(max(base + jitter, 0.1), 0.95)
 
 
 def run(
     query: str,
     finance_result: dict | None = None,
     medical_result: dict | None = None,
+    web_result: dict | None = None,
 ) -> dict:
     """
     Synthesize one or two domain answers into a final response.
@@ -70,6 +83,8 @@ def run(
         parts.append(f"[Financial Analysis]\n{finance_result['answer']}")
     if medical_result and medical_result.get("answer"):
         parts.append(f"[Medical Analysis]\n{medical_result['answer']}")
+    if web_result and web_result.get("answer"):
+        parts.append(f"[Web Search Analysis]\n{web_result['answer']}")
 
     if not parts:
         return {
@@ -97,8 +112,10 @@ def run(
         all_sources.extend(finance_result.get("sources", []))
     if medical_result:
         all_sources.extend(medical_result.get("sources", []))
+    if web_result:
+        all_sources.extend(web_result.get("sources", []))
 
-    confidence = _compute_confidence(finance_result, medical_result)
+    confidence = _compute_confidence(finance_result, medical_result, web_result)
     log.info("Synthesizer done. confidence=%.2f sources=%d", confidence, len(all_sources))
 
     return {

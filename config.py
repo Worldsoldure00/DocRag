@@ -28,7 +28,7 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY")
 
 ENTREZ_EMAIL    = os.getenv("ENTREZ_EMAIL", "placeholder@email.com")
-SEC_EDGAR_NAME  = os.getenv("SEC_EDGAR_NAME", "DocSight RAG")
+SEC_EDGAR_NAME  = os.getenv("SEC_EDGAR_NAME", "Multi-Agent RAG")
 SEC_EDGAR_EMAIL = os.getenv("SEC_EDGAR_EMAIL", "placeholder@email.com")
 
 # Enable LangSmith tracing only when key is present
@@ -57,9 +57,9 @@ MEDICAL_EMBED_MODEL = "NeuML/pubmedbert-base-embeddings" # 768-dim, purpose-buil
 # ── Groq Models ───────────────────────────────────────────────────────────────
 # Fast hosted inference — used when LLM_BACKEND=groq or for QA generation
 GROQ_ROUTER_MODEL     = "llama-3.1-8b-instant"      # fast routing
-GROQ_EXPERT_MODEL     = "llama-3.3-70b-versatile"   # best quality for expert answers
-GROQ_SYNTHESIZER_MODEL = "llama-3.3-70b-versatile"
-GROQ_QA_GEN_MODEL     = "llama-3.3-70b-versatile"   # synthetic QA pair generation
+GROQ_EXPERT_MODEL     = "llama-3.1-8b-instant"      # using smaller model to avoid rate limits
+GROQ_SYNTHESIZER_MODEL = "llama-3.1-8b-instant"     # using smaller model to avoid rate limits
+GROQ_QA_GEN_MODEL     = "llama-3.1-8b-instant"      # synthetic QA pair generation
 
 # ── Ollama Model Names (after fine-tuning + GGUF conversion) ──────────────────
 OLLAMA_ROUTER    = "phi4-mini-router"

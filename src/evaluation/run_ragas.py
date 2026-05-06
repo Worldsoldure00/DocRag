@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 import json
 import argparse
 import logging
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -41,6 +42,7 @@ def _run_pipeline_on_eval(eval_set: list[dict]) -> list[dict]:
             "contexts":       [s["content"] for s in state.get("all_sources", [])],
             "ground_truth":   item["ground_truth"],
         })
+        time.sleep(3)  # Rate limit delay
     return results
 
 
