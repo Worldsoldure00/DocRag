@@ -1,27 +1,56 @@
-# DocRag Test Queries
+# Multi-Agent RAG — Test Queries
 
-Use these queries to test the dynamic LangGraph routing and ensure the correct agent (Finance, Medical, Both, or Web Fallback) picks up the query.
+A reference set of test questions organized by **expected routing domain**, complexity, and edge cases.  
+Use these to verify that the router, retrieval, and synthesizer agents are all working correctly.
 
-## 📊 Finance Expert (SEC Filings)
-These queries contain financial terminology and company names, triggering the `finance` routing path:
-1. What was Apple's total net revenue for the fiscal year ended September 30, 2023?
-2. What are the primary risk factors mentioned in Tesla's latest 10-K filing?
-3. Summarize the total research and development (R&D) expenses reported in the latest quarter.
+---
 
-## 🏥 Medical Expert (PubMed Literature)
-These queries contain clinical terminology, triggering the `medical` routing path:
-1. What is the relationship between apical vertebra rotation and severe scoliosis?
-2. What are the recommended clinical treatments for supine hypertension?
-3. Does continuous positive airway pressure (CPAP) treatment reduce blood pressure in patients with obstructive sleep apnea?
+## 🏦 Finance Queries → `finance` domain
 
-## ⚖️ Both Experts (Hybrid Intersectional Queries)
-These queries contain a mix of financial terms (cost, revenue, market) and medical terms (hypertension, clinical), triggering the `both` routing path:
-1. What is the financial cost and market impact associated with clinical treatments for severe hypertension?
-2. Are there any financial reports on the revenue growth of healthcare companies developing treatments for scoliosis?
-3. How do medical technology investments and R&D spending impact the treatment outcomes for cardiovascular diseases?
+| # | Query |
+|---|---|
+| F1 | What was Apple's total revenue in fiscal year 2023? |
+| F2 | How much net income did Microsoft report in 2023? |
+| F3 | What are the key risk factors JPMorgan Chase identified in their 2023 10-K? |
+| F4 | How much did Tesla spend on research and development in 2023? |
+| F5 | What were Google's advertising revenues in 2022? |
 
-## 🌐 Web Fallback Expert (Out-of-Domain)
-These queries have absolutely nothing to do with SEC filings or PubMed literature. The router will likely guess `medical` or `both`, but the local vector databases will return `0` sources, causing the graph to dynamically fallback to the `web_agent`:
-1. What is the capital of France and what is its population?
-2. How do I bake a homemade chocolate cake from scratch?
-3. Who won the Super Bowl in 2024?
+---
+
+## 🏥 Medical Queries → `medical` domain
+
+| # | Query |
+|---|---|
+| M1 | What are the first-line treatment options for type 2 diabetes? |
+| M2 | What is the mechanism of action of metformin? |
+| M3 | How effective are PD-1 inhibitors in improving survival rates for lung cancer patients? |
+| M4 | What lifestyle interventions are most effective for reducing cardiovascular disease risk? |
+| M5 | What are the common side effects of antihypertensive medications? |
+
+---
+
+## 🔀 Cross-Domain Queries → `both` domain
+
+Both the Finance and Medical agents are triggered, with the Synthesizer merging the results.
+
+| # | Query |
+|---|---|
+| B1 | How did Pfizer's COVID-19 vaccine revenue affect their 2022 financials, and what are the clinical outcomes of their vaccine? |
+| B2 | What is Johnson & Johnson's revenue from oncology drugs, and what does the research say about their cancer treatments? |
+| B3 | How much does the pharmaceutical industry invest in diabetes drug R&D, and what new treatments are showing the most promise? |
+| B4 | What are the financial projections for the cardiovascular drug market, and what are the most effective drugs being studied? |
+| B5 | Explain the relationship between Pfizer's revenue growth and the clinical impact of their top-selling drugs. |
+
+---
+
+## 🌐 Web Fallback Queries
+
+Topics outside the indexed documents — the system should fall back to the **Web Agent**.
+
+| # | Query |
+|---|---|
+| W1 | What is the current stock price of Apple? |
+| W2 | What are the latest FDA drug approvals in 2025? |
+| W3 | Who is the current CEO of Goldman Sachs? |
+| W4 | What are the side effects of a drug approved after 2024? |
+| W5 | What happened at the most recent Federal Reserve meeting? |

@@ -28,7 +28,7 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY")
 
 ENTREZ_EMAIL    = os.getenv("ENTREZ_EMAIL", "placeholder@email.com")
-SEC_EDGAR_NAME  = os.getenv("SEC_EDGAR_NAME", "DocSight RAG")
+SEC_EDGAR_NAME  = os.getenv("SEC_EDGAR_NAME", "Multi-Agent RAG")
 SEC_EDGAR_EMAIL = os.getenv("SEC_EDGAR_EMAIL", "placeholder@email.com")
 
 # Enable LangSmith tracing only when key is present

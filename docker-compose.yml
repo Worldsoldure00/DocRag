@@ -1,0 +1,19 @@
+
+services:
+  docsight-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docsight-ui
+    ports:
+      - "8501:8501"
+    volumes:
+      # Bind mount data and indexes so the container can access the locally generated FAISS databases and raw chunks
+      - ./data:/app/data
+      - ./indexes:/app/indexes
+    env_file:
+      - .env
+    environment:
+      # Explicitly set the host address for Streamlit
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped

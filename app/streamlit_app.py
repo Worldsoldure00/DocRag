@@ -1,5 +1,5 @@
 """
-DocSight RAG — Streamlit Web UI
+Multi-Agent RAG — Streamlit Web UI
 Run: streamlit run app/streamlit_app.py
 """
 import sys, os, time, traceback

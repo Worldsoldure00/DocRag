@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git *)",
-      "Bash(/usr/local/bin/python3.11 *)",
-      "Bash(streamlit *)"
-    ]
-  }
-}
