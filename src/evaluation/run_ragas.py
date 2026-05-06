@@ -63,15 +63,64 @@ def evaluate_domain(domain: str, sample: int | None = None) -> pd.DataFrame:
     from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall
     from langchain_groq import ChatGroq
     from langchain_community.embeddings import HuggingFaceEmbeddings
+    from langchain_core.outputs import ChatResult
+    from ragas.run_config import RunConfig
+    import asyncio
+
+    class SafeGroqLLM(ChatGroq):
+        """Wrapper to handle Groq's n=1 limitation and API rate limits by running sequentially."""
+        
+        def _ensure_json(self, messages, kwargs):
+            if "response_format" in kwargs and kwargs["response_format"].get("type") == "json_object":
+                last_content = messages[-1].content
+                if "json" not in last_content.lower():
+                    messages = list(messages)
+                    messages[-1].content = last_content + "\n(Return strictly in JSON format)"
+            return messages
+
+        def _generate(self, messages, stop=None, run_manager=None, **kwargs):
+            import time
+            n = kwargs.pop("n", getattr(self, "n", 1))
+            self.n = 1  # Force inner ChatGroq to use n=1
+            messages = self._ensure_json(messages, kwargs)
+            
+            if n > 1:
+                generations = []
+                for _ in range(n):
+                    time.sleep(2)
+                    res = super()._generate(messages, stop=stop, run_manager=run_manager, **kwargs)
+                    generations.extend(res.generations)
+                return ChatResult(generations=generations)
+            time.sleep(2)
+            return super()._generate(messages, stop=stop, run_manager=run_manager, **kwargs)
+
+        async def _agenerate(self, messages, stop=None, run_manager=None, **kwargs):
+            n = kwargs.pop("n", getattr(self, "n", 1))
+            self.n = 1  # Force inner ChatGroq to use n=1
+            messages = self._ensure_json(messages, kwargs)
+            
+            if n > 1:
+                generations = []
+                for _ in range(n):
+                    await asyncio.sleep(2.5)
+                    res = await super()._agenerate(messages, stop=stop, run_manager=run_manager, **kwargs)
+                    generations.extend(res.generations)
+                return ChatResult(generations=generations)
+            await asyncio.sleep(2.5)
+            return await super()._agenerate(messages, stop=stop, run_manager=run_manager, **kwargs)
 
     ragas_ds = Dataset.from_list(results)
 
-    llm = ChatGroq(
+    llm = SafeGroqLLM(
         model=config.RAGAS_LLM_MODEL,
         api_key=config.GROQ_API_KEY,
         temperature=0,
+        max_retries=10,
     )
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+    # Fix: answer_relevancy internally requests n=3 which fails on Groq or causes 400/timeout
+    answer_relevancy.strictness = 1
 
     log.info("Running RAGAS evaluation...")
     scores = evaluate(
@@ -79,6 +128,7 @@ def evaluate_domain(domain: str, sample: int | None = None) -> pd.DataFrame:
         metrics=[faithfulness, answer_relevancy, context_precision, context_recall],
         llm=llm,
         embeddings=embeddings,
+        run_config=RunConfig(max_workers=1, timeout=120, max_retries=10)
     )
 
     df = scores.to_pandas()
