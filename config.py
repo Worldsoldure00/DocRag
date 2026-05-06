@@ -57,9 +57,9 @@ MEDICAL_EMBED_MODEL = "NeuML/pubmedbert-base-embeddings" # 768-dim, purpose-buil
 # ── Groq Models ───────────────────────────────────────────────────────────────
 # Fast hosted inference — used when LLM_BACKEND=groq or for QA generation
 GROQ_ROUTER_MODEL     = "llama-3.1-8b-instant"      # fast routing
-GROQ_EXPERT_MODEL     = "llama-3.3-70b-versatile"   # best quality for expert answers
-GROQ_SYNTHESIZER_MODEL = "llama-3.3-70b-versatile"
-GROQ_QA_GEN_MODEL     = "llama-3.3-70b-versatile"   # synthetic QA pair generation
+GROQ_EXPERT_MODEL     = "llama-3.1-8b-instant"      # using smaller model to avoid rate limits
+GROQ_SYNTHESIZER_MODEL = "llama-3.1-8b-instant"     # using smaller model to avoid rate limits
+GROQ_QA_GEN_MODEL     = "llama-3.1-8b-instant"      # synthetic QA pair generation
 
 # ── Ollama Model Names (after fine-tuning + GGUF conversion) ──────────────────
 OLLAMA_ROUTER    = "phi4-mini-router"
