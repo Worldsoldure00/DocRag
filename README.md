@@ -50,35 +50,27 @@ Used for deep domain-specific expertise running entirely on local hardware.
 
 ## Architecture
 
-```
-User Query
-    │
-    ▼
-┌─────────────────┐
-│   Router Agent   │  ← Classifies query: finance / medical / both
-└────────┬────────┘
-         │
-    ┌────┴────┐
-    ▼         ▼
-┌────────┐ ┌─────────┐
-│Finance │ │ Medical  │  ← Domain experts: hybrid BM25 + FAISS retrieval
-│ Agent  │ │  Agent   │    + fine-tuned LLM (Llama-3.1 / BioMistral)
-└───┬────┘ └────┬─────┘
-    │           │
-    └─────┬─────┘
-          │  (fallback if no sources found)
-          ▼
-    ┌──────────┐
-    │ Web Agent │  ← DuckDuckGo search fallback
-    └─────┬────┘
-          │
-          ▼
-┌──────────────────┐
-│  Synthesizer      │  ← Merges domain answers, adds citations + confidence
-└──────────────────┘
-          │
-          ▼
-   Final Answer + Sources + Domain Tag
+```mermaid
+graph TD
+    A[User Query] --> B[Router Agent]
+    B -->|finance| C[Finance Agent]
+    B -->|medical| D[Medical Agent]
+    B -->|both| C & D
+
+    C --> E{Sources found?}
+    D --> E
+
+    E -->|No| F[Web Agent]
+    E -->|Yes| G[Synthesizer]
+    F --> G
+
+    G --> H[Final Answer + Sources + Domain Tag]
+
+    B -.- B1["Classifies query: finance / medical / both"]
+    C -.- C1["Hybrid BM25 + FAISS retrieval\n+ fine-tuned LLM (Llama-3.1 / BioMistral)"]
+    D -.- C1
+    F -.- F1["DuckDuckGo search fallback"]
+    G -.- G1["Merges domain answers,\nadds citations + confidence"]
 ```
 
 **Orchestration**: [LangGraph](https://github.com/langchain-ai/langgraph) stateful graph  
