@@ -43,7 +43,11 @@ if HF_TOKEN:
 # ── LLM Serving ───────────────────────────────────────────────────────────────
 # "groq"   → uses Groq API with base models (works immediately, no fine-tuning needed)
 # "ollama" → uses locally served fine-tuned GGUF models via Ollama
-LLM_BACKEND    = os.getenv("LLM_BACKEND", "groq")
+LLM_BACKEND     = os.getenv("LLM_BACKEND", "groq")
+ROUTER_BACKEND  = os.getenv("ROUTER_BACKEND", LLM_BACKEND)
+EXPERT_BACKEND  = os.getenv("EXPERT_BACKEND", LLM_BACKEND)
+SYNTH_BACKEND   = os.getenv("SYNTH_BACKEND", LLM_BACKEND)
+WEB_BACKEND     = os.getenv("WEB_BACKEND", EXPERT_BACKEND)
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
 # ── HuggingFace Model IDs ─────────────────────────────────────────────────────

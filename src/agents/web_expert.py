@@ -24,7 +24,7 @@ Answer:"""
 
 
 def _get_llm():
-    if config.LLM_BACKEND == "groq":
+    if config.WEB_BACKEND == "groq":
         from langchain_groq import ChatGroq
         return ChatGroq(
             model=config.GROQ_EXPERT_MODEL,
