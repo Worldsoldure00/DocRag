@@ -31,9 +31,9 @@ The architecture is highly modular, supporting both lightning-fast cloud inferen
 * **Medical**: `NeuML/pubmedbert-base-embeddings` (768-dimensional space, purpose-built for PubMed medical literature).
 
 ### Generation Models (LLM Backends)
-You can seamlessly switch between two LLM backends using the `LLM_BACKEND` variable in your `.env` file:
+You can switch between two LLM backends using the `LLM_BACKEND` variable in your `.env` file. Per-agent overrides (`ROUTER_BACKEND`, `EXPERT_BACKEND`, `SYNTH_BACKEND`, `WEB_BACKEND`) are available for later Groq/Ollama combinations, but the default setup keeps everything on Groq.
 
-#### 1. Groq API (Cloud - Default)
+#### 1. Groq API (Cloud)
 Used for rapid inference to bypass typical generation bottlenecks.
 * **Router Agent**: `llama-3.1-8b-instant`
 * **Finance & Medical Experts**: `llama-3.1-8b-instant`
@@ -84,7 +84,7 @@ graph TD
 ### 1. Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
-- A [Groq API key](https://console.groq.com/) (free tier is sufficient)
+- Optional: A [Groq API key](https://console.groq.com/) if you want Groq-based routing or inference
 
 ### 2. Configure Environment
 
@@ -95,8 +95,12 @@ cp .env.example .env
 Edit `.env` and fill in at minimum:
 
 ```env
-GROQ_API_KEY=gsk_your_groq_key_here
-LLM_BACKEND=groq
+LLM_BACKEND=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+
+# Optional if you want Groq for the router only
+# GROQ_API_KEY=gsk_your_groq_key_here
+# ROUTER_BACKEND=groq
 ```
 
 Optional (for LangSmith tracing):

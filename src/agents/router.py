@@ -27,7 +27,7 @@ def _parse_domain(raw: str) -> str:
 
 def classify_domain(query: str) -> str:
     """Return 'finance', 'medical', or 'both' for the given query."""
-    if config.LLM_BACKEND == "groq":
+    if config.ROUTER_BACKEND == "groq":
         return _classify_groq(query)
     return _classify_ollama(query)
 

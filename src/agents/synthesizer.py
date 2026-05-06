@@ -28,7 +28,7 @@ Synthesized answer:"""
 
 
 def _get_llm():
-    if config.LLM_BACKEND == "groq":
+    if config.SYNTH_BACKEND == "groq":
         from langchain_groq import ChatGroq
         return ChatGroq(
             model=config.GROQ_SYNTHESIZER_MODEL,
