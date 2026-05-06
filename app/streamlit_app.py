@@ -22,10 +22,16 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Backend fixed to groq
 import config
-config.LLM_BACKEND = "groq"
-os.environ["LLM_BACKEND"] = "groq"
+
+# ── Backend status ───────────────────────────────────────────────────────────
+backend_line = (
+    f"Router: {config.ROUTER_BACKEND} | "
+    f"Experts: {config.EXPERT_BACKEND} | "
+    f"Synth: {config.SYNTH_BACKEND} | "
+    f"Web: {config.WEB_BACKEND}"
+)
+st.caption(f"Backends — {backend_line}")
 
 try:
     import torch as _torch
