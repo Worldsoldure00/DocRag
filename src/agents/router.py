@@ -29,6 +29,8 @@ def classify_domain(query: str) -> str:
     """Return 'finance', 'medical', or 'both' for the given query."""
     if config.ROUTER_BACKEND == "groq":
         return _classify_groq(query)
+    if config.ROUTER_BACKEND in ("hf", "transformers"):
+        return _classify_hf(query)
     return _classify_ollama(query)
 
 
@@ -67,4 +69,19 @@ def _classify_ollama(query: str) -> str:
     ])
     domain = _parse_domain(response.content)
     log.debug("Router (Ollama) → %s for query: %s", domain, query[:80])
+    return domain
+
+
+def _classify_hf(query: str) -> str:
+    from src.agents.hf_transformers import generate_text
+
+    prompt = f"{SYSTEM_PROMPT}\n\nQuestion: {query}\n\nAnswer:"
+    raw = generate_text(
+        config.HF_ROUTER_MODEL,
+        prompt,
+        max_new_tokens=10,
+        temperature=0.0,
+    )
+    domain = _parse_domain(raw)
+    log.debug("Router (HF) → %s for query: %s", domain, query[:80])
     return domain

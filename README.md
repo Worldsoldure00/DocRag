@@ -24,14 +24,14 @@ The system is powered by two distinct, real-world data sources to ground the mod
 
 ## AI Models Used
 
-The architecture is highly modular, supporting both lightning-fast cloud inference and fully local, fine-tuned execution.
+The architecture is highly modular, supporting cloud inference and fully local execution.
 
 ### Retrieval Models (Embeddings)
 * **Finance**: `BAAI/bge-large-en-v1.5` (1024-dimensional space, optimized for financial text).
 * **Medical**: `NeuML/pubmedbert-base-embeddings` (768-dimensional space, purpose-built for PubMed medical literature).
 
 ### Generation Models (LLM Backends)
-You can switch between two LLM backends using the `LLM_BACKEND` variable in your `.env` file. Per-agent overrides (`ROUTER_BACKEND`, `EXPERT_BACKEND`, `SYNTH_BACKEND`, `WEB_BACKEND`) are available for later Groq/Ollama combinations, but the default setup keeps everything on Groq.
+You can switch between three LLM backends using the `LLM_BACKEND` variable in your `.env` file. Per-agent overrides (`ROUTER_BACKEND`, `EXPERT_BACKEND`, `SYNTH_BACKEND`, `WEB_BACKEND`) are available, but the default setup keeps everything on Groq.
 
 #### 1. Groq API (Cloud)
 Used for rapid inference to bypass typical generation bottlenecks.
@@ -45,6 +45,14 @@ Used for deep domain-specific expertise running entirely on local hardware.
 * **Finance Expert**: `llama31-finance-expert` (Fine-tuned from Llama-3.1-8B-Instruct).
 * **Medical Expert**: `biomistral-medical-expert` (Fine-tuned from BioMistral-7B).
 * **Synthesizer**: Reuses the `llama31-finance-expert`.
+
+#### 3. HuggingFace Transformers (Local PyTorch)
+Use local or Hub models directly via Transformers.
+* **Router**: `HF_ROUTER_MODEL`
+* **Finance**: `HF_FINANCE_MODEL`
+* **Medical**: `HF_MEDICAL_MODEL`
+* **Synthesizer**: `HF_SYNTH_MODEL`
+* **Web**: `HF_WEB_MODEL`
 
 ---
 
@@ -101,6 +109,14 @@ OLLAMA_BASE_URL=http://localhost:11434
 # Optional if you want Groq for the router only
 # GROQ_API_KEY=gsk_your_groq_key_here
 # ROUTER_BACKEND=groq
+
+# Optional if you want local Transformers
+# LLM_BACKEND=hf
+# HF_FINANCE_MODEL=path_or_hf_id
+# HF_MEDICAL_MODEL=path_or_hf_id
+# HF_ROUTER_MODEL=path_or_hf_id
+# HF_SYNTH_MODEL=path_or_hf_id
+# HF_WEB_MODEL=path_or_hf_id
 ```
 
 Optional (for LangSmith tracing):

@@ -32,6 +32,14 @@ def _get_llm():
             temperature=0.2,
             max_tokens=1024,
         )
+    if config.WEB_BACKEND in ("hf", "transformers"):
+        from src.agents.hf_transformers import invoke_text
+        return lambda prompt: invoke_text(
+            config.HF_WEB_MODEL,
+            prompt,
+            max_new_tokens=1024,
+            temperature=0.2,
+        )
     from langchain_ollama import ChatOllama
     return ChatOllama(
         model=config.OLLAMA_MEDICAL,  # fallback to the medical/general model
@@ -88,9 +96,13 @@ def run(query: str) -> dict:
         system=SYSTEM_PROMPT, context=context, question=query
     )
 
-    llm    = _get_llm()
-    result = llm.invoke(prompt)
-    answer = result.content if hasattr(result, "content") else str(result)
+    llm = _get_llm()
+    if callable(llm):
+        result = llm(prompt)
+        answer = result.content if hasattr(result, "content") else str(result)
+    else:
+        result = llm.invoke(prompt)
+        answer = result.content if hasattr(result, "content") else str(result)
 
     log.info("Web expert generated answer (%d chars)", len(answer))
     return {

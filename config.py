@@ -43,6 +43,7 @@ if HF_TOKEN:
 # ── LLM Serving ───────────────────────────────────────────────────────────────
 # "groq"   → uses Groq API with base models (works immediately, no fine-tuning needed)
 # "ollama" → uses locally served fine-tuned GGUF models via Ollama
+# "hf"     → uses HuggingFace Transformers locally (PyTorch)
 LLM_BACKEND     = os.getenv("LLM_BACKEND", "groq")
 ROUTER_BACKEND  = os.getenv("ROUTER_BACKEND", LLM_BACKEND)
 EXPERT_BACKEND  = os.getenv("EXPERT_BACKEND", LLM_BACKEND)
@@ -70,6 +71,19 @@ OLLAMA_ROUTER    = "phi4-mini-router"
 OLLAMA_FINANCE   = "llama31-finance-expert"
 OLLAMA_MEDICAL   = "biomistral-medical-expert"
 OLLAMA_SYNTH     = "llama31-finance-expert"  # reuse finance model as synthesizer base
+
+# ── HuggingFace Transformers (local) ─────────────────────────────────────────
+# Use HF_*_MODEL to point to a local folder or a HuggingFace model ID.
+HF_ROUTER_MODEL  = os.getenv("HF_ROUTER_MODEL", ROUTER_BASE_MODEL)
+HF_FINANCE_MODEL = os.getenv("HF_FINANCE_MODEL", FINANCE_BASE_MODEL)
+HF_MEDICAL_MODEL = os.getenv("HF_MEDICAL_MODEL", MEDICAL_BASE_MODEL)
+HF_SYNTH_MODEL   = os.getenv("HF_SYNTH_MODEL", FINANCE_BASE_MODEL)
+HF_WEB_MODEL     = os.getenv("HF_WEB_MODEL", MEDICAL_BASE_MODEL)
+
+# Device and dtype for local Transformers loading
+HF_DEVICE_MAP = os.getenv("HF_DEVICE_MAP", "auto")
+HF_DTYPE      = os.getenv("HF_DTYPE", "auto")  # auto | fp16 | bf16 | fp32
+HF_TRUST_REMOTE_CODE = os.getenv("HF_TRUST_REMOTE_CODE", "false").lower() == "true"
 
 # ── Chunking ──────────────────────────────────────────────────────────────────
 CHUNK_SIZE    = 512
